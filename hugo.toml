@@ -1,7 +1,7 @@
 baseURL = "https://crisbh.github.io/numerical-relativity-intro/"
 languageCode = "es"
-title = "Relatividad Numérica"
-theme = "relearn"
+title = "Introducción a la Relatividad Numérica"
+theme = "book"
 
 [markup]
   [markup.goldmark]
@@ -9,4 +9,9 @@ theme = "relearn"
       unsafe = true
   [markup.highlight]
     style = "dracula"
+
+[[menu.after]]
+    name = "📖 Clases"
+    url = "/slides/"
+    weight = 5
 
