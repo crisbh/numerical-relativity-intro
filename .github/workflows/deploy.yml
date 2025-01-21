@@ -33,11 +33,12 @@ jobs:
     - name: Build Hugo Site
       run: hugo --minify
 
+
     # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        publish_dir: ./public  # This ensures all files are uploaded
         publish_branch: gh-pages
-
+        force_orphan: true  # Overwrites previous deployments with a fresh commit
