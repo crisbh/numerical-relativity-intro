@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:50778/slides/slides-clase-1/</loc>
-  </url><url>
-    <loc>http://localhost:50778/categories/</loc>
-  </url><url>
-    <loc>http://localhost:50778/</loc>
-  </url><url>
-    <loc>http://localhost:50778/slides/</loc>
-  </url><url>
-    <loc>http://localhost:50778/tags/</loc>
+    <loc>https://crisbh.github.io/numerical-relativity-intro/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>https://crisbh.github.io/numerical-relativity-intro/slides/index.html</loc>
+  </url>
+  <url>
+    <loc>https://crisbh.github.io/numerical-relativity-intro/tags/index.html</loc>
   </url>
 </urlset>

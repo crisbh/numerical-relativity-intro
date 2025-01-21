@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:50778/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Relatividad Numérica</title>
+    <link>https://crisbh.github.io/numerical-relativity-intro/index.html</link>
+    <description>Bienvenido a Relatividad Numérica</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:50778/index.xml" rel="self" type="application/rss+xml" />
+    <language>es</language>
+    <atom:link href="https://crisbh.github.io/numerical-relativity-intro/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://localhost:50778/slides/slides-clase-1/</link>
+      <title>Slides</title>
+      <link>https://crisbh.github.io/numerical-relativity-intro/slides/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:50778/slides/slides-clase-1/</guid>
-      <description>&lt;h1 id=&#34;introducción-a-la-relatividad-numérica&#34;&gt;&lt;strong&gt;Introducción a la Relatividad Numérica&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;clase-1-motivación-y-aplicaciones&#34;&gt;Clase 1: Motivación y Aplicaciones&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;objetivos-de-la-clase&#34;&gt;&lt;strong&gt;Objetivos de la Clase&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Comprender la motivación detrás de la Relatividad Numérica.&lt;/li&gt;&#xA;&lt;li&gt;Explorar las aplicaciones principales en astrofísica y gravitación.&lt;/li&gt;&#xA;&lt;li&gt;Introducir los desafíos computacionales en la solución de las ecuaciones de Einstein.&lt;/li&gt;&#xA;&lt;li&gt;Familiarizarse con el papel de las simulaciones numéricas en la exploración de fenómenos gravitacionales extremos.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;qué-es-la-relatividad-numérica&#34;&gt;&lt;strong&gt;¿Qué es la Relatividad Numérica?&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;La &lt;strong&gt;Relatividad Numérica&lt;/strong&gt; es el campo de la física computacional que estudia la resolución de las ecuaciones de Einstein mediante técnicas numéricas. Permite explorar fenómenos gravitacionales altamente dinámicos donde los métodos analíticos no son suficientes.&lt;/p&gt;</description>
+      <guid>https://crisbh.github.io/numerical-relativity-intro/slides/index.html</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
