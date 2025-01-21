@@ -31,7 +31,7 @@ jobs:
 
     # Step 4: Build the Hugo site
     - name: Build Hugo Site
-      run: hugo
+      run: hugo --minify
 
     # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
