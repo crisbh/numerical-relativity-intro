@@ -10,19 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
+    # Step 1: Checkout the repository with submodules
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
         submodules: true  # Ensures Hugo themes are cloned
 
-    # Step 2: Install Hugo Extended and Marp
-    - name: Install Hugo and Marp
-      run: |
-        sudo apt-get install hugo -y
-        npm install -g @marp-team/marp-cli
+    # Step 2: Install the latest Hugo Extended
+    - name: Install Hugo Extended
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.126.1'
+        extended: true
 
-    # Step 3: Convert Marp Slides
+    # Step 3: Install Marp
+    - name: Install Marp
+      run: npm install -g @marp-team/marp-cli
+
+    # Step 4: Convert Marp Slides
     - name: Convert Marp Slides
       run: |
         mkdir -p static/slides
@@ -31,11 +36,11 @@ jobs:
           marp "$file" --html --theme gaia --output "static/slides/${filename}.html"
         done
 
-    # Step 4: Build the Hugo site (ensure it includes themes)
+    # Step 5: Build the Hugo site
     - name: Build Hugo Site
       run: hugo --minify --cleanDestinationDir
 
-    # Step 5: Deploy to GitHub Pages
+    # Step 6: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
