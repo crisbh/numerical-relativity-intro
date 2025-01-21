@@ -9,7 +9,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "Slides for the Course Clase 1: Introduccion",
+    "content": "Clases del curso: Clase 1: Introduccion",
     "description": "Clases del curso",
     "tags": [],
     "title": "Clases",
