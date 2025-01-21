@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Relatividad Numérica</title>
-    <link>https://crisbh.github.io/numerical-relativity-intro/index.html</link>
+    <link>http://localhost:56346/numerical-relativity-intro/index.html</link>
     <description>Bienvenido a Relatividad Numérica</description>
     <generator>Hugo</generator>
     <language>es</language>
-    <atom:link href="https://crisbh.github.io/numerical-relativity-intro/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:56346/numerical-relativity-intro/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Slides</title>
-      <link>https://crisbh.github.io/numerical-relativity-intro/slides/index.html</link>
+      <title>Clases</title>
+      <link>http://localhost:56346/numerical-relativity-intro/slides/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://crisbh.github.io/numerical-relativity-intro/slides/index.html</guid>
-      <description></description>
+      <guid>http://localhost:56346/numerical-relativity-intro/slides/index.html</guid>
+      <description>Clases del curso</description>
     </item>
   </channel>
 </rss>

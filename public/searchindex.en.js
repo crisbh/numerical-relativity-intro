@@ -9,10 +9,10 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "",
-    "description": "",
+    "content": "Slides for the Course Clase 1: Introduccion",
+    "description": "Clases del curso",
     "tags": [],
-    "title": "Slides",
+    "title": "Clases",
     "uri": "/numerical-relativity-intro/slides/index.html"
   },
   {
