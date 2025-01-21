@@ -1,0 +1,12 @@
+baseURL = "https://crisbh.github.io/numerical-relativity/"
+languageCode = "es"
+title = "Relatividad Numérica"
+theme = "relearn"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+
