@@ -1,4 +1,4 @@
-baseURL = "https://crisbh.github.io/numerical-relativity/"
+baseURL = "https://crisbh.github.io/numerical-relativity-intro/"
 languageCode = "es"
 title = "Relatividad Numérica"
 theme = "relearn"
