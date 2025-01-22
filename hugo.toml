@@ -3,12 +3,25 @@ languageCode = "es"
 title = "Introducción a la Relatividad Numérica"
 theme = "book"
 
+[params]
+  BookTheme = 'auto'
+  BookToC = true
+  BookSearch = false
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "dracula"
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'monokailight'
+    tabWidth = 8
 
 [[menu.after]]
     name = "📖 Clases"
