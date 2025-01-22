@@ -2,6 +2,7 @@ baseURL = "https://crisbh.github.io/numerical-relativity-intro/"
 languageCode = "es"
 title = "Introducción a la Relatividad Numérica"
 theme = "book"
+enableEmoji = true
 
 [params]
   BookTheme = 'auto'

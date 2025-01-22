@@ -1,6 +1,5 @@
 ---
 marp: true
-paginate: true
 math: katex
 paginate: true
 html: true
@@ -19,10 +18,9 @@ style: |
 
 ## **Objetivos de la Clase**
 
-- Comprender los postulados de la Relatividad Especial.
+- Repaso de la Relatividad Especial.
 - Introducir el concepto de espaciotiempo de Minkowski.
 - Analizar la estructura matemática de la métrica de Minkowski.
-- Explorar ejemplos de intervalos espaciotemporales y transformaciones de Lorentz.
 - Entender el Principio de Equivalencia y su relación con la curvatura del espaciotiempo.
 - Diferenciar entre espaciotiempos planos y curvos.
 - Conectar la Relatividad Especial con la Relatividad General en términos de curvatura.
@@ -33,7 +31,7 @@ style: |
 
 Hermann Minkowski formalizó el concepto de espaciotiempo en 1908, unificando el tiempo y el espacio en una estructura geométrica única.
 
-- Relatividad Especial reformula la física clásica en términos de una geometría cuatridimensional.
+- La Relatividad Especial reformula la física clásica en términos de una geometría cuadridimensional.
 - Este marco permite comprender la transformación del tiempo y el espacio bajo diferentes sistemas de referencia.
 
 **Retrato de Minkowski (Placeholder)**
@@ -46,29 +44,31 @@ Hermann Minkowski formalizó el concepto de espaciotiempo en 1908, unificando el
 
 - En la mecánica clásica, el espacio y el tiempo son entidades separadas.
 - En Relatividad Especial, están unificados en una única estructura: el espaciotiempo.
-- Cada evento en el universo se representa con cuatro coordenadas $(t, x, y, z)$.
+- Cada *evento* en el universo se representa con cuatro coordenadas $(t, x, y, z)$.
 
 ---
 
 ## **Diferencia entre Espaciotiempo Plano y Curvo**
 
-- **Espaciotiempo plano**: Sin influencia gravitatoria, descrito por la métrica de Minkowski.
-- **Espaciotiempo curvo**: La presencia de masa-energía deforma la geometría del espaciotiempo.
+De acuerdo a la Relatividad General, la gravedad **no es una fuerza**, si no el resultado de la deformación del espaciotiempo.
+
+- **Espaciotiempo plano**: Sin gravedad, descrito por la métrica de Minkowski.
+- **Espaciotiempo curvo**: Con gravedad, debido a que la presencia de masa-energía deforma su geometría.
 
 ---
 
 ## **Métrica del Espaciotiempo de Minkowski**
 
-La métrica define la distancia entre dos eventos en el espaciotiempo:
+La **métrica** permite definir la distancia entre dos eventos en el espaciotiempo:
 
 $$
  ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2
 $$
 
-Donde:
-- $ds^2$ es el **intervalo espaciotemporal**.
-- $c$ es la velocidad de la luz.
-- $dt, dx, dy, dz$ representan las diferencias de coordenadas temporales y espaciales.
+donde
+- $ds^2$: **intervalo espaciotemporal**.
+- $dt, dx, dy, dz$: diferencias de coordenadas temporales y espaciales.
+- $c$: velocidad de la luz.
 
 ---
 
@@ -85,7 +85,7 @@ Donde:
 
 ## **Interpretación del Intervalo Espaciotemporal**
 
-El intervalo espaciotemporal define la relación entre eventos:
+El intervalo espaciotemporal define la relación causal entre eventos:
 
 - **Tipo tiempo** ($ds^2 < 0$): Puede existir una conexión causal entre eventos.
 - **Tipo luz** ($ds^2 = 0$): Eventos en el cono de luz.
@@ -113,36 +113,32 @@ $$
 \end{aligned}
 $$
 
-Con el factor de Lorentz:
-
-$$
-\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
-$$
+Con el factor de Lorentz $\gamma \equiv \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$.
 
 ---
 
-## **Ejemplo Numérico: Transformación de Lorentz**
-
-```python
-import numpy as np
-
-def gamma(v, c=1):
-    return 1 / np.sqrt(1 - v**2 / c**2)
-
-def transformacion_lorentz(t, x, v, c=1):
-    g = gamma(v, c)
-    t_prime = g * (t - v*x/c**2)
-    x_prime = g * (x - v*t)
-    return t_prime, x_prime
-
-t, x = 1, 1  # Evento en el sistema original
-v = 0.5  # Velocidad relativa
-
-t_prime, x_prime = transformacion_lorentz(t, x, v)
-print(f"Coordenadas transformadas: t'={t_prime}, x'={x_prime}")
-```
-
----
+<!-- ## **Ejemplo Numérico: Transformación de Lorentz** -->
+<!---->
+<!-- ```python -->
+<!-- import numpy as np -->
+<!---->
+<!-- def gamma(v, c=1): -->
+<!--     return 1 / np.sqrt(1 - v**2 / c**2) -->
+<!---->
+<!-- def transformacion_lorentz(t, x, v, c=1): -->
+<!--     g = gamma(v, c) -->
+<!--     t_prime = g * (t - v*x/c**2) -->
+<!--     x_prime = g * (x - v*t) -->
+<!--     return t_prime, x_prime -->
+<!---->
+<!-- t, x = 1, 1  # Evento en el sistema original -->
+<!-- v = 0.5  # Velocidad relativa -->
+<!---->
+<!-- t_prime, x_prime = transformacion_lorentz(t, x, v) -->
+<!-- print(f"Coordenadas transformadas: t'={t_prime}, x'={x_prime}") -->
+<!-- ``` -->
+<!---->
+<!-- --- -->
 
 ## **Consecuencias Físicas de la Relatividad Especial**
 
@@ -154,35 +150,9 @@ print(f"Coordenadas transformadas: t'={t_prime}, x'={x_prime}")
 
 ## **Principio de Equivalencia**
 
-El Principio de Equivalencia establece que la gravedad y la aceleración pueden ser indistinguibles en ciertos marcos de referencia.
-
-- **Ejemplo:** Un astronauta en un ascensor sin ventanas no puede distinguir si está en caída libre en un campo gravitacional o en un sistema sin gravedad.
-
-**Imagen ilustrativa del experimento del ascensor (Placeholder)**
-
-![Inserte imagen del experimento aquí] <!-- TODO: Agregar imagen real -->
-
+El **Principio de Equivalencia** establece que la gravedad y la aceleración pueden ser indistinguibles en ciertos marcos de referencia.
 
 ---
-
-## **Principio de Equivalencia y Curvatura del Espaciotiempo**
-
----
-
-## **Concepto del Principio de Equivalencia**
-
-El Principio de Equivalencia de Einstein establece que:
-
-- No es posible distinguir entre un campo gravitatorio uniforme y un sistema de referencia acelerado.
-- Un observador en caída libre no experimenta gravedad.
-- La gravedad es una manifestación de la curvatura del espaciotiempo.
-
-**Imagen de un experimento de caída libre (Placeholder)**
-
-![Inserte imagen aquí] <!-- TODO: Agregar imagen real -->
-
----
-
 ## **Experimento Mental del Ascensor de Einstein**
 
 - Si un observador dentro de un ascensor cerrado siente una fuerza hacia el suelo, podría deberse a la gravedad o a una aceleración.
@@ -190,6 +160,23 @@ El Principio de Equivalencia de Einstein establece que:
 - Esto sugiere que la gravedad puede entenderse como una aceleración.
 
 **Imagen ilustrativa del experimento del ascensor (Placeholder)**
+
+![Inserte imagen del experimento aquí] <!-- TODO: Agregar imagen real -->
+
+---
+## **Principio de Equivalencia**
+
+Según el Principio de Equivalencia de Einstein:
+
+- No es posible distinguir entre un campo gravitatorio uniforme y un sistema de referencia acelerado.
+- Un observador en caída libre no experimenta gravedad.
+- La gravedad es una manifestación de la curvatura del espaciotiempo.
+
+---
+
+## **Principio de Equivalencia**
+
+**Imagen de un experimento de caída libre (Placeholder)**
 
 ![Inserte imagen aquí] <!-- TODO: Agregar imagen real -->
 
@@ -201,6 +188,8 @@ El Principio de Equivalencia de Einstein establece que:
 - En presencia de gravedad, estas trayectorias se curvan debido a la geometría del espaciotiempo.
 - La Relatividad General describe la gravedad como una deformación de la métrica espaciotemporal.
 
+---
+
 **Comparación de trayectorias en espacios planos y curvos (Placeholder)**
 
 ![Inserte imagen aquí] <!-- TODO: Agregar imagen real -->
@@ -209,39 +198,42 @@ El Principio de Equivalencia de Einstein establece que:
 
 ## **Tensor de Curvatura de Riemann**
 
-El tensor de curvatura de Riemann cuantifica la curvatura del espaciotiempo y está dado por:
+El **tensor de curvatura de Riemann** cuantifica la curvatura del espaciotiempo:
 
 $$
 R^{\rho}_{\sigma\mu\nu} = \partial_{\mu} \Gamma^{\rho}_{\nu\sigma} - \partial_{\nu} \Gamma^{\rho}_{\mu\sigma} + \Gamma^{\rho}_{\mu\lambda} \Gamma^{\lambda}_{\nu\sigma} - \Gamma^{\rho}_{\nu\lambda} \Gamma^{\lambda}_{\mu\sigma}
 $$
 
 - Si $R^{\rho}_{\sigma\mu\nu} = 0$, el espaciotiempo es plano.
-- Si es distinto de cero, hay curvatura gravitacional.
+- Si es distinto de cero, hay curvatura, y por lo tanto gravedad.
+
+Más detalles dentro de las próximas clases.
 
 ---
 
-## **Ecuaciones de Einstein**
+## **Pruebas Experimentales de la Relatividad General**
 
-La Relatividad General se fundamenta en las ecuaciones de Einstein:
+- **Desviación de la luz por el Sol** (Eddington, 1919).
+- **Corrimiento gravitacional al rojo** (Pound-Rebka, 1959).
+- **Correcciones relativistas en el GPS**.
 
-$$
-G_{\mu \nu} + \Lambda g_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}
-$$
+**Imagen de una prueba experimental (Placeholder)**
 
-Donde:
-- $G_{\mu \nu}$ es el tensor de Einstein, que describe la curvatura del espaciotiempo.
-- $T_{\mu \nu}$ es el tensor energía-momento, que representa la distribución de materia y energía.
-- $\Lambda$ es la constante cosmológica.
+![Inserte imagen aquí] <!-- TODO: Agregar imagen real -->
 
 ---
 
-## **Ejemplo Numérico: Efecto de la Gravedad en el Tiempo**
+## **Efecto de la Gravedad en el Tiempo**
 
-La Relatividad General predice que el tiempo transcurre más lentamente en campos gravitatorios fuertes. Esto se modela con la dilatación temporal gravitacional:
+La Relatividad General predice que el tiempo transcurre más lentamente en presencia de un campo gravitacional, i.e. existe una dilatación temporal gravitacional:
 
 $$
 \Delta t' = \Delta t \sqrt{1 - \frac{2GM}{rc^2}}
 $$
+
+---
+
+Ejemplo: en el caso de la Tierra:
 
 ```python
 import numpy as np
@@ -260,23 +252,10 @@ print(f"Tiempo medido cerca de la Tierra: {dilatacion_gravitacional(t, M, r)} se
 
 ---
 
-## **Pruebas Experimentales de la Relatividad General**
-
-- **Desviación de la luz por el Sol** (Eddington, 1919).
-- **Corrimiento gravitacional al rojo** (Pound-Rebka, 1959).
-- **Correcciones relativistas en el GPS**.
-
-**Imagen de una prueba experimental (Placeholder)**
-
-![Inserte imagen aquí] <!-- TODO: Agregar imagen real -->
-
----
-
 ## **Conclusión**
 
 - El Principio de Equivalencia conecta la gravedad con la aceleración.
 - La Relatividad General describe la gravedad como curvatura del espaciotiempo.
 - Las ecuaciones de Einstein permiten modelar la influencia de la masa y energía en la geometría del universo.
-
 
 

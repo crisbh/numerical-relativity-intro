@@ -2,7 +2,6 @@
 marp: true
 paginate: true
 math: katex
-paginate: true
 html: true
 style: |
   section {
@@ -13,47 +12,56 @@ style: |
 ---
 
 # **Introducción a la Relatividad Numérica**
-## Clase 1: Motivación y Aplicaciones
+## Clase 1
 
 ---
 
 ## **Objetivos del curso**
 
-- Comprender la motivación detrás de la Relatividad Numérica.
-- Explorar las aplicaciones principales en astrofísica y gravitación.
-- Introducir los desafíos computacionales en la solución de las ecuaciones de Einstein.
-- Familiarizarse con el papel de las simulaciones numéricas en la exploración de fenómenos gravitacionales extremos.
+En este curso, aprenderemos sobre:
+- Los conceptos fundamentales de la Relatividad Numérica.
+- Las principales aplicaciones en astrofísica y gravitación.
+- Los desafíos computacionales para resolver las ecuaciones de Einstein.
+- El rol de las simulaciones numéricas en la exploración de fenómenos gravitacionales extremos.
 
 ---
 
 ## **¿Qué es la Relatividad Numérica?**
 
-La **Relatividad Numérica** es el campo de la física computacional que estudia la resolución de las ecuaciones de Einstein mediante técnicas numéricas. Permite explorar fenómenos gravitacionales altamente dinámicos donde los métodos analíticos no son suficientes.
+- La **Relatividad Numérica** es la rama de la física computacional que estudia soluciones de las ecuaciones de Einstein mediante técnicas numéricas.
+- Permite explorar fenómenos gravitacionales altamente dinámicos donde los métodos analíticos no son suficientes.
+
+---
+
+## **Ecuaciones de Einstein**
 
 $$
 G_{\mu \nu} + \Lambda g_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}
 $$
-
-Donde:
-- $G_{\mu \nu}$ es el tensor de Einstein, que describe la curvatura del espaciotiempo.
-- $g_{\mu \nu}$ es la métrica del espaciotiempo, la función que define la geometría del mismo.
-- $T_{\mu \nu}$ es el tensor energía-momento, que representa la distribución de materia y energía.
-- $\Lambda$ es la constante cosmológica, que puede influir en la evolución a gran escala del universo.
+donde
+- $G_{\mu \nu}$: tensor de Einstein. Describe la curvatura del espaciotiempo.
+- $g_{\mu \nu}$: métrica del espaciotiempo. Define su geometría.
+- $T_{\mu \nu}$: tensor energía-momento. Representa la distribución de materia y energía.
+- $\Lambda$: constante cosmológica. Influencia la evolución del universo a gran escala.
 
 ---
 
-## **Motivación: Por qué estudiar Relatividad Numérica**
+## **Aplicaciones de la Relatividad Numérica**
 
 - **Ondas gravitacionales:** Permite predecir y analizar señales detectadas por observatorios como LIGO y Virgo.
-- **Colisión de agujeros negros y estrellas de neutrones:** La Relatividad Numérica es esencial para modelar estos eventos y predecir sus efectos observacionales.
-- **Colapso gravitacional y formación de agujeros negros:** Ayuda a comprender cómo se forman estos objetos en eventos como el colapso de supernovas.
-- **Cosmología computacional:** Se pueden simular modelos de evolución del universo y probar teorías alternativas de gravedad.
+- **Colisión de agujeros negros y estrellas de neutrones:** Permite modelar estos eventos y predecir sus efectos observacionales.
+- **Colapso gravitacional y formación de agujeros negros:** Permite estudiar cómo se forman estos objetos.
+- **Cosmología computacional:** Permite estudiar la evolución del universo y probar teorías de gravitación.
 
 ---
 
 ## **Ejemplo: La primera detección de ondas gravitacionales (2015)**
 
-En 2015, LIGO detectó por primera vez una señal de ondas gravitacionales generadas por la fusión de dos agujeros negros. Este evento confirmó la predicción de la Relatividad General de Einstein y abrió una nueva era en la astronomía.
+- En 2015, LIGO detectó por primera vez una señal de ondas gravitacionales generadas por la fusión de dos agujeros negros.
+- Este evento confirmó una predicció importante de la Relatividad General de Einstein.
+- Además, abrió una nueva era en la astronomía.
+
+---
 
 **Imagen de la detección de ondas gravitacionales (Placeholder)**
 
@@ -83,8 +91,8 @@ plt.show()
 
 ## **Desafíos Computacionales en Relatividad Numérica**
 
-1. **Ecuaciones altamente no lineales:** Las ecuaciones de Einstein son un sistema de ecuaciones en derivadas parciales no lineales, lo que dificulta su solución numérica.
-2. **Condiciones de frontera y estabilidad numérica:** Se deben diseñar algoritmos que garanticen estabilidad y precisión en la simulación de espaciotiempos curvados.
+1. **Ecuaciones altamente no lineales:** Las ecuaciones de Einstein son un sistema de ecuaciones en derivadas parciales no lineales, lo que dificulta su solución.
+2. **Condiciones de frontera y estabilidad numérica:** Se deben diseñar algoritmos que garanticen estabilidad y precisión en la simulación de espaciotiempos curvos.
 3. **Altos requerimientos computacionales:** La simulación de escenarios relativistas requiere un gran poder computacional, incluyendo el uso de supercomputadoras.
 
 ---
@@ -99,11 +107,16 @@ plt.show()
 La Relatividad Numérica no solo es relevante en la investigación teórica, sino que ha tenido un impacto profundo en áreas como:
 
 - **Astronomía de ondas gravitacionales:** Interpretación de datos obtenidos de observatorios como LIGO y Virgo.
-- **Exploración de nuevas físicas:** Prueba de teorías alternativas de gravedad y materia exótica.
+- **Exploración de nueva física:** Prueba de teorías alternativas de gravedad y materia oscura exótica.
 - **Desarrollo de algoritmos computacionales avanzados:** Métodos de integración numérica y técnicas de análisis de datos.
 
 ---
 
 ## Evaluaciones del curso
+  - TBA
 ## Fechas importantes
+  - TBA
 ## Reglas del curso
+  - TBA
+## Bibliografia
+  - TBA
