@@ -8,8 +8,9 @@ paginate: true
 html: true
 style: |
   section {
-    font-size: 2.0em;
+    font-size: 2.2em !important;
     font-family: 'Arial', sans-serif;
+    overflow: hidden;
   }
 ---
 
@@ -18,7 +19,7 @@ style: |
 
 ---
 
-## **Objetivos de la Clase**
+## **Objetivos del curso**
 
 - Comprender la motivación detrás de la Relatividad Numérica.
 - Explorar las aplicaciones principales en astrofísica y gravitación.
@@ -105,13 +106,6 @@ La Relatividad Numérica no solo es relevante en la investigación teórica, sin
 
 ---
 
-## **Próxima Clase: Relatividad Especial y el Espaciotiempo de Minkowski**
-
-### **Tarea:**
-- Leer la introducción del libro de Baumgarte & Shapiro y reflexionar sobre la importancia de la Relatividad Numérica en la detección de ondas gravitacionales.
-- Investigar sobre la importancia de las condiciones iniciales en simulaciones relativistas.
-
----
-
-## ** Preguntas? **
-
+## Evaluaciones del curso
+## Fechas importantes
+## Reglas del curso
