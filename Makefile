@@ -9,15 +9,19 @@ HTML_SLIDES := $(patsubst slides/%.md, $(OUTPUT_DIR)/%.html, $(SLIDES))
 
 # Define Marp command
 MARP_CMD := marp --html --theme gaia
+HUGO_CMD := hugo server --minify --theme hugo-book
 
 # Build website with hugo
-site:
-	hugo server --minify --theme hugo-book
+site: slides
+	$(HUGO_CMD)
 
 # Default target: Build all slides
-all: $(HTML_SLIDES) site
+all: slides site
 
-# Rule to convert .md to .html
+# Rule to convert .md to .html (Build Slides)
+#
+slides: $(HTML_SLIDES)
+
 $(OUTPUT_DIR)/%.html: slides/%.md
 	@mkdir -p $(OUTPUT_DIR)
 	$(MARP_CMD) $< --output $@
