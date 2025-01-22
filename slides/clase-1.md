@@ -2,8 +2,6 @@
 marp: true
 paginate: true
 math: katex
-theme: gaia
-size: 16:9
 paginate: true
 html: true
 style: |

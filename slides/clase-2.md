@@ -2,15 +2,13 @@
 marp: true
 paginate: true
 math: katex
+paginate: true
+html: true
 style: |
   section {
-    font-size: 2.0em;
+    font-size: 2.2em !important;
     font-family: 'Arial', sans-serif;
-  }
-  :root {
-    --theme-background: #ffffff;
-    --theme-color: #333333;
-    --theme-primary: #007acc;
+    overflow: hidden;
   }
 ---
 
