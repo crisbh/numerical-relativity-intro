@@ -1,14 +1,14 @@
 {
   "name": "Introducción a la Relatividad Numérica",
   "short_name": "Introducción a la Relatividad Numérica",
-  "start_url": "/numerical-relativity-intro/",
-  "scope": "/numerical-relativity-intro/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/numerical-relativity-intro/favicon.svg",
+      "src": "/favicon.svg",
       "sizes": "512x512"
     }
   ]
