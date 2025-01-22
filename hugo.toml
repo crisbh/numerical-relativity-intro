@@ -1,4 +1,5 @@
-baseURL = "https://crisbh.github.io/numerical-relativity-intro/"
+#baseURL = "https://crisbh.github.io/numerical-relativity-intro/"
+baseURL = "https://numerical-relativity-intro.github.io"
 languageCode = "es"
 title = "Introducción a la Relatividad Numérica"
 theme = "book"
