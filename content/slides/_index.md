@@ -14,5 +14,9 @@ description: "Clases del curso"
 7. [Clase 7: La solución de agujero negro](clase-7.html)
 8. [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html)
 9. [Clase 9: Ondas gravitacionales](clase-9.html)
+10. [Clase 10: Taller: simulacion de ondas gravitacionales](clase-10.html)
+11. [Clase 11: Ejercicios y Tarea](clase-11.html)
+12. [Clase 12: Foliación del espaciotiempo y formalismo 3+1](clase-12.html)
+13. [Clase 13: Construcción de datos iniciales](clase-13.html)
 
 

@@ -165,6 +165,12 @@ Al igual que Newton al proponer su teoría de la gravedad, Einstein propuso sus 
 
 ---
 
+## **Conexión con el principio de minima acción**
+
+- TODO add a couple of slides for this.
+
+---
+
 ## **Soluciones de las Ecuaciones de Einstein**
 
 Las ecuaciones de Einstein son **más complejas y no lineales**, lo que hace que resolverlas analíticamente sea difícil.
