@@ -84,18 +84,6 @@ Bibliografía complementaria:
 - M. Alcubierre, "Introduction to 3+1 Numerical Relativity", Oxford University Press, 2008.
 - S. Carroll, "Spacetime and Geometry: An Introduction to General Relativity", Addison-Wesley, 2003.
 
----
-
-## **Ecuaciones de Einstein**
-
-$$
-G_{\mu \nu} + \Lambda g_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}
-$$
-donde
-- $G_{\mu \nu}$: tensor de Einstein $\to$ la curvatura del espaciotiempo.
-- $g_{\mu \nu}$: métrica del espaciotiempo $\to$ la geometría.
-- $T_{\mu \nu}$: tensor energía-momento $\to$ materia y energía.
-- $\Lambda$: constante cosmológica $\to$ expansión del universo.
 
 ---
 
@@ -117,17 +105,9 @@ donde
 
 ---
 
-
-<!-- <iframe width="560" height="315" -->
-<!--     src="https://www.youtube.com/embed/YOUR_VIDEO_ID" -->
-<!--     frameborder="0" -->
-<!--     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" -->
-<!--     allowfullscreen> -->
-<!-- </iframe> -->
-
 <div class="video-container">
     <iframe 
-        src="https://www.youtube.com/watch?v=FGC_DM7ZgAk" 
+        src="https://www.youtube-nocookie.com/embed/FGC_DM7ZgAk" 
         frameborder="0" 
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
@@ -137,6 +117,19 @@ donde
 ---
 
 ![GW signal](images/LIGO_measurement_of_gravitational_waves.svg)
+
+---
+
+## **Ecuaciones de Einstein**
+
+$$
+G_{\mu \nu} + \Lambda g_{\mu \nu} = \frac{8 \pi G}{c^4} T_{\mu \nu}
+$$
+donde
+- $G_{\mu \nu}$: tensor de Einstein $\to$ la curvatura del espaciotiempo.
+- $g_{\mu \nu}$: métrica del espaciotiempo $\to$ la geometría.
+- $T_{\mu \nu}$: tensor energía-momento $\to$ materia y energía.
+- $\Lambda$: constante cosmológica $\to$ expansión del universo.
 
 ---
 
