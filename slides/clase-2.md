@@ -38,7 +38,7 @@ style: |
 ---
 
 ## **Plan de la Clase**
-- Gravedad Newtoniana.
+- Fuerza y potencial gravitacional.
 - Algunas analogías con la electroestática.
 - La ecuación de Poisson para el potencial gravitacional y algunas soluciones.
 - Gravedad vs aceleración.
