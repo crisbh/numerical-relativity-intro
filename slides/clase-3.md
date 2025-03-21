@@ -3,163 +3,256 @@ marp: true
 paginate: true
 math: katex
 html: true
+style: |
+  section {
+    font-size: 2.2em !important;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  img {
+    display: block;
+    margin: auto;
+    width: 60%;
+    max-width: 100%;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: black;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 ---
 
-# **Formalismo Tensorial: Álgebra y Operaciones Básicas**
+# **La Gravedad Newtoniana pt 2**
 ## Clase 3
 
 ---
 
-## **Objetivos de la Clase**
-- Introducir el uso de tensores en física.
-- Definir las operaciones básicas con tensores.
-- Explorar el uso del formalismo tensorial en la Relatividad General.
-- Resolver ejercicios prácticos sobre manipulación de tensores.
+## **Plan de la Clase**
+- La ecuación de Poisson para el potencial gravitacional y algunas soluciones.
+- Gravedad vs aceleración.
+- La ecuación de marea y conexión con Relatividad General.
 
 ---
 
-## **Motivación: ¿Por qué usar tensores?**
-Los tensores son fundamentales en la Relatividad General y en diversas ramas de la física teórica.
+## **Ejemplo: Resolver la ecuación de Poisson para una masa puntual**
 
-**Pricipio de Relatividad de Einstein**: las leyes de la Física deben ser las mismas en todos los sistemas de
-coordenadas.
-
-En RG, las coordenadas son simplemente etiquetas para eventos. No tienen sentido físico.
-
-- Permiten describir propiedades físicas de forma independiente del sistema de coordenadas.
-  - En RG, permiten escribir ecuaciones en forma **covariante**.
-
----
-## **Notación de indices**
-
-En el curso de MMFII, vieron la notación de indices para vectores y matrices.
+Resuelva la ecuación de Poisson 
 
 $$
-V_i, M_{ij}, ...
+\nabla^2 \Phi = 4\pi G \rho
 $$
 
-Convenciones de RG (y de este curso):
-- Índices Latinos ($i$, $j$, $k$, ...) pueden tomar valores 1, 2, 3.
-- Índices Griegos ($\alpha$, $\beta$, $\gamma$, ...) pueden tomar valores 0, 1, 2, 3.
-- El índice 0 corresponde al tiempo.
-- Los índices 1, 2, 3 corresponden a las coordenadas espaciales.
+para encontrar el campo producido por una masa puntual.
 
 ---
-## **Convención de suma de Einstein**
 
-En cualquier expresión, términos con índices repetidos están sumados.
-**Nota**: Además, un índice debe estar "arriba" y otro "abajo".
+## **Ejemplo: Resolver la ecuación de Poisson para una masa puntual**
 
+### Desarrollado en clase anterior, hasta aplicación de la Ley de Gauss
+
+
+---
+
+## **Ejemplo: Resolver la ecuación de Poisson para una masa puntual**
+
+Ahora aplicamos las condiciones de borde sobre la solución.
+1. Físicamente, esperamos una solución *asintóticamente plana*:
+   $$
+   \Phi(r\to\infty)\to0  \implies C_2=0
+   $$
+
+2. Para determinar $C_1$, podemos aplicar la *Ley de Gauss*:
 $$
-\sum_1^3 A^i B_i = A^i B_i = A^1B_1 + A^2B_2 + A^3B_3
+\oint_S \mathbf{g} \cdot dS =-\oint_S \mathbf{\nabla}\Phi \cdot dS = -4\pi G M_{\text{enc}}
 $$
-
----
-## **Ejemplos**
-
-Producto interno.
-Producto matricial.
-
 ---
 
-## **Definición de Tensor**
-Un tensor es un objeto matemático que transforma según reglas específicas bajo cambios de coordenadas.
+## **Ejemplo: Resolver la ecuación de Poisson para una masa puntual**
 
-Los tensores generalizan los conceptos de escalares, vectores y matrices.
-
-Ejemplo de un tensor de segundo orden:
-
-$$ T'^{\mu \nu} = \Lambda^\mu_{\,\alpha} \Lambda^\nu_{\,\beta} T^{\alpha \beta} $$
-
-donde $\Lambda^\mu_{\,\alpha}$ representa la transformación de coordenadas.
-
----
-
-## **Tipos de Tensores**
-
-Los tensores pueden clasificarse de acuerdo a su *rango*:
-- **Escalar ($T^0$):** Un número que no cambia con las coordenadas.
-- **Vector ($T^1$):** Un objeto con una única fila o columna de componentes.
-- **Tensor de rango 2 ($T^2$):** Una matriz que obedece transformaciones tensoriales.
-- **Tensor de rango superior ($T^n$):** Generalización a múltiples índices.
-
----
-
-## **La Métrica del Espaciotiempo**
-Uno de los tensores más importantes en relatividad es la **métrica del espaciotiempo** $g_{\mu\nu}$.
-
-- Define la distancia entre eventos en el espaciotiempo.
-- En coordenadas cartesianas en Relatividad Especial:
-  $$ g_{\mu\nu} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} $$
-- Permite calcular productos escalares en espacio-tiempo:
-  $$ ds^2 = g_{\mu\nu} dx^{\mu} dx^{\nu} $$
-- En próximas clases, veremos su papel en la Relatividad General.
-
-
----
-
-## **Operaciones Básicas con Tensores**
-1. **Suma de tensores** (misma estructura):
-   $$ C^{\mu\nu} = A^{\mu\nu} + B^{\mu\nu} $$
-
-2. **Producto tensorial:**
-   $$ (A \otimes B)^{\mu \nu} = A^{\mu} B^{\nu} $$
-
-3. **Contracción de índices:**
-   $$ T^\mu_{\,\mu} = g^{\mu \nu} T_{\mu \nu} $$
-
-4. **Cambio de base:**
-   $$ T'^{\mu \nu} = \Lambda^\mu_{\,\alpha} \Lambda^\nu_{\,\beta} T^{\alpha \beta} $$
-
----
-
-## **Ejemplo: Producto Tensorial**
-Dado los vectores:
-
-$$ A^\mu = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad B^\nu = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} $$
-
-El producto tensorial es:
-
-$$ C^{\mu\nu} = A^\mu B^\nu $$
-
----
-Cálculo paso a paso:
-
+Integrando sobre una esfera de radio $\epsilon$, con $dS = r^2 d\Omega$, encontramos que:
 $$
-C^{\mu\nu} = \begin{bmatrix} 1 \times 4 & 1 \times 5 & 1 \times 6 \\
-2 \times 4 & 2 \times 5 & 2 \times 6 \\
-3 \times 4 & 3 \times 5 & 3 \times 6 \end{bmatrix}
-= \begin{bmatrix} 4 & 5 & 6 \\
-8 & 10 & 12 \\
-12 & 15 & 18 \end{bmatrix}
+\left. \frac{d\Phi}{dr} \right|_{r=\epsilon} 4\pi r^2 = 4\pi G M
 $$
 
+Por lo que $C_1 = G M$. La solución final es entonces la esperada:
+
+$$
+\Phi(r) = -\frac{GM}{r}.
+$$
+
+
+
 ---
 
-## **Ejemplo: Contracción de Tensores**
-Dado el tensor:
+## **Comentario sobre la solución** 
 
-$$ T^{\mu\nu} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} $$
+- Notar que aplicando la Ley de Gauss desde un comienzo también habría sido posible encontrar la solución.
+- Sin embargo, no la usamos ya que el ejercicio nos pedía resolver la ecuación de Poisson.
+- En general utilizar la Ley de Gauss requiere menos cálculo.
+  - Tiene alguna desvetaja este método de solución?
 
-Y la métrica identidad $g^{\mu\nu} = \delta^{\mu\nu}$, la contracción es:
+---
 
-$$ T^\mu_{\,\mu} = \sum_{\mu} T^{\mu\mu}= 1 + 5 + 9 = 15 $$
+## **Ejemplo: Potencial Gravitacional de una Esfera Uniforme**
+Considere una esfera uniforme de radio $R$ y densidad $\rho$ constante. 
+Resolver la ecuación de Poisson $\nabla^2 \Phi = 4 \pi G \rho$ y encontrar el potencial asociado a dicha esfera.
+
+---
+
+## **Ejemplo: Potencial Gravitacional de una Esfera Uniforme**
+
+- En coordenadas esféricas, la solución es una función radial.
+- Solución interior ($r<R$):
+
+$$ \Phi(r) = -\frac{2\pi G \rho}{3} r^2 + C $$
+
+- Solución exterior ($r>R$):
+
+$$ \Phi(r) = -G \frac{M}{r} $$
+
+<!-- - ¿Cómo fijar la constante de integración $C$? -->
+---
+
+## **Gravedad vs Aceleración**
+
+- Galileo Galilei estudió la gravedad lanzando objetos desde la torre de Pisa y observando su movimiento.
+  - Concluyó que todos los cuerpos caen con la **misma aceleración**, independiente de cual sea su masa.
+
+- Einstein propuso el "experimento mental" de un ascensor para analizar esto en mayor detalle.
+---
+
+## **Experimento del ascensor**
+
+![width:60%](images/ascensor-exp.webp)
+
+---
+
+## **Experimento del ascensor**
+
+Ahora, extendamos el análisis anterior al caso de un rayo de luz:
+
+![Experimento del ascensor](images/luz-ascensor.jpg)
+
+---
+
+## **El Principio de Equivalencia de Einstein**
+
+En base a este experimento mental, Einstein postuló que:
+
+*Localmente, no hay experimento físico que pueda distinguir entre un campo gravitacional, y un sistema de referencia acelerado en ausencia de gravedad.*
+
+- Según esto, **no se puede diferenciar** entre estar en un campo gravitatorio o en un sistema acelerado.
+- La **gravedad afecta la trayectoria de la luz**.
+
+Esto motiva el entender que la **gravedad puede ser interpretada como un efecto geométrico** en el espacio-tiempo.
+
+<!-- --- -->
+<!---->
+<!-- ## **Gravedad vs Aceleración** -->
+<!---->
+<!-- - De lo anterior, podríamos concluir que podemos siempre utilizar la aceleración para detectar un campo gravitacional. -->
+<!-- - Esto no es cierto en general.  -->
+<!---->
+<!-- --- -->
+<!---->
+<!-- ## **Experimento del ascensor** -->
+<!---->
+<!-- Imaginemos un observador dentro de un ascensor en caída libre en presencia de un campo gravitacional. Como tanto el ascensor como el observador están sujetos a la misma aceleración gravitacional: -->
+<!---->
+<!-- $$ a = -\nabla \Phi $$ -->
+<!---->
+<!-- En tal caso, el observador no siente ninguna fuerza y experimenta un entorno "sin gravedad". Este es el **Principio de Equivalencia** en su forma más básica. -->
+
+---
+
+## **Experimento del ascensor**
+
+- Se puede llegar a detectar de alguna forma el campo gravitacional en el experimento del ascensor?
+- **Sí es posible medirlo**, pero se requiere realizar una medición **en un entorno** (región) dentro del ascensor.
+    - No hay contradicción con lo concluido en el experimento anterior vale de forma **local**.
+
+Consideremos, en el mismo ascensor, dos partículas muy cercanas con posiciones $x^i$ y $x^i + \Delta x^i$.
+
+---
+
+![Tidal forces](images/elevator-tidal-forces.png)
+
+---
+
+## **El Tensor de Marea**
+
+Las ecuaciones de movimiento difieren debido a las variaciones en el campo gravitacional:
+
+$$ \frac{d^2 x^i}{dt^2} = -\partial^i \Phi $$
+
+Luego, para la separación $\Delta x^i$ entre las partículas tenemos:
+
+$$ \frac{d^2 \Delta x_i}{dt^2} = -\Delta x^j (\partial_j \partial_i \Phi)$$
+
+---
+
+## **El Tensor de Marea**
+
+Este efecto es conocido como **fuerza de marea**, y su intensidad está caracterizada por el **tensor de marea**:
+
+$$ R_{ij} \equiv \partial_i \partial_j \Phi $$
+
+El cual se asocia a la **ecuación de marea**:
+
+$$ \frac{d^2 \Delta x^i}{dt^2} = -R^i_{\ j} \Delta x^j $$
+
+Físicamente, este tensor **mide cómo la gravedad estira y comprime** los objetos en caída libre.
+
+---
+
+## **Relación con la Ecuación de Poisson**
+
+Notar que, en coordenadas cartesianas:
+
+$$ \nabla^2 \Phi = \partial^x\partial_x \Phi + \partial^y\partial_y \Phi +  \partial^z\partial_z \Phi = R^{i}_{i}$$
+
+Luego, podemos reescribir la ecuación de Poisson como:
+
+$$  R^{i}_{i} = 4\pi G \rho $$
+
+Esta forma alternativa de la ecuación de Poisson será más cercana en forma a las ecuaciones de la Relatividad General.
+
+---
+
+## **Analogía con la Relatividad General**
+
+| Cantidad | Gravedad Newtoniana | Relatividad General |
+|---|---|---|
+| Campo fundamental | Potencial $\Phi$ | Métrica $g_{\mu\nu}$ |
+| Ecuación de movimiento | $\partial_i \Phi$ | Símbolos de Christoffel $\Gamma^\mu_{\alpha\beta}(g_{\mu\nu},\partial g_{\mu\nu}$) |
+| Tensor de marea | $\partial_i \partial_j \Phi$ | Tensor de Riemann $R^\rho_{\sigma\mu\nu}$ |
+| Ecuación de campo | $\nabla^2 \Phi = 4\pi G \rho$ | $G_{\mu\nu} = 8\pi G T_{\mu\nu}$ |
+
+---
+
+## **Limitaciones de la Gravedad Newtoniana**
+- No explica experimentos tales como:
+  - La desviación de la luz debido a la presencia de objetos masivos.
+  - La precesión del perihelio de Mercurio.
+- No es relativista (incompatible con la Relatividad Especial).
+- No describe correctamente objetos compactos como agujeros negros.
+- No predice las ondas gravitacionales.
 
 ---
 
 ## **Ejercicios Propuestos**
-1. **Contracción**: Calcular la contracción del siguiente tensor:
-   $$ T^{\mu\nu} = \begin{bmatrix} 3 & 1 \\ 4 & 2 \end{bmatrix} $$
-2. **Transformación de Coordenadas**: Aplicar la transformación:
-   $$ T'^{\mu\nu} = \Lambda^\mu_{\,\alpha} \Lambda^\nu_{\,\beta} T^{\alpha \beta} $$
-   con $\Lambda = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$ y $T$ dado anteriormente.
-3. **Cálculo de la inversa de un tensor**: Determinar $T^{-1}$.
+1. Derivar la ecuación de Poisson para el campo gravitacional a partir de las leyes de la gravedad Newtoniana.
+2. Calcular el tensor de marea para una masa puntual.
+<!-- 3. Comparar la aceleración de caída libre en diferentes marcos de referencia. -->
 
----
-
-## **Conclusión**
-- El formalismo tensorial es esencial en física teórica y relatividad.
-- Operaciones como la suma, producto tensorial y contracción permiten manipular tensores de forma estructurada.
-- En las próximas clases, estudiaremos la métrica y conexiones en espacios curvos.
-- Veremos también módulos de Python para manipulación de tensores.
 
