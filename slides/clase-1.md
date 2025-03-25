@@ -172,7 +172,7 @@ La Relatividad Numérica no solo es relevante en la investigación teórica, sin
     - Tarea 2: entrega semana 7 del curso.
 - Un proyecto de investigación sobre un tópico afín:
   - Presentación de avance: 26 de junio (20%)
-  - Presentación final: 10 y 17 de junio (50%)
+  - Presentación final: 10 y 17 de julio (50%)
 
 - Prueba Extraordinaria: 23 de julio.
 
