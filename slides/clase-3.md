@@ -97,7 +97,7 @@ $$
 ## **Comentario sobre la solución** 
 
 - Notar que aplicando la Ley de Gauss desde un comienzo también habría sido posible encontrar la solución.
-- Sin embargo, no la usamos ya que el ejercicio nos pedía resolver la ecuación de Poisson.
+  - Sin embargo, no la usamos ya que el ejercicio nos pedía resolver la ecuación de Poisson.
 - En general utilizar la Ley de Gauss requiere menos cálculo.
   - Tiene alguna desvetaja este método de solución?
 
@@ -120,12 +120,16 @@ $$ \Phi(r) = -\frac{2\pi G \rho}{3} r^2 + C $$
 
 $$ \Phi(r) = -G \frac{M}{r} $$
 
-<!-- - ¿Cómo fijar la constante de integración $C$? -->
+---
+
+## **Ejemplo: Potencial Gravitacional de una Esfera Uniforme**
+
+- ¿Cómo fijar la constante de integración $C$?
 ---
 
 ## **Gravedad vs Aceleración**
 
-- Galileo Galilei estudió la gravedad lanzando objetos desde la torre de Pisa y observando su movimiento.
+- Galileo Galilei (~1590) estudió la gravedad lanzando objetos desde la torre de Pisa y observando su movimiento.
   - Concluyó que todos los cuerpos caen con la **misma aceleración**, independiente de cual sea su masa.
 
 - Einstein propuso el "experimento mental" de un ascensor para analizar esto en mayor detalle.
@@ -134,6 +138,8 @@ $$ \Phi(r) = -G \frac{M}{r} $$
 ## **Experimento del ascensor**
 
 ![width:60%](images/ascensor-exp.webp)
+
+Son equivalente ambas situaciones para la persona en el ascensor?
 
 ---
 
@@ -149,12 +155,11 @@ Ahora, extendamos el análisis anterior al caso de un rayo de luz:
 
 En base a este experimento mental, Einstein postuló que:
 
-*Localmente, no hay experimento físico que pueda distinguir entre un campo gravitacional, y un sistema de referencia acelerado en ausencia de gravedad.*
+*Localmente, ningún experimento puede distinguir entre un campo gravitacional, y un sistema de referencia acelerado en ausencia de gravedad.*
 
-- Según esto, **no se puede diferenciar** entre estar en un campo gravitatorio o en un sistema acelerado.
-- La **gravedad afecta la trayectoria de la luz**.
-
-Esto motiva el entender que la **gravedad puede ser interpretada como un efecto geométrico** en el espacio-tiempo.
+De esta forma:
+- Se explica que la **gravedad sí afecta la trayectoria de la luz**.
+- Esto motiva el entender que la **gravedad puede ser interpretada como un efecto geométrico** en el espacio-tiempo.
 
 <!-- --- -->
 <!---->
@@ -173,15 +178,20 @@ Esto motiva el entender que la **gravedad puede ser interpretada como un efecto 
 <!---->
 <!-- En tal caso, el observador no siente ninguna fuerza y experimenta un entorno "sin gravedad". Este es el **Principio de Equivalencia** en su forma más básica. -->
 
+
+---
+
+  ![Experimento del Eddington](images/eddington.jpg)
+
 ---
 
 ## **Experimento del ascensor**
 
 - Se puede llegar a detectar de alguna forma el campo gravitacional en el experimento del ascensor?
 - **Sí es posible medirlo**, pero se requiere realizar una medición **en un entorno** (región) dentro del ascensor.
-    - No hay contradicción con lo concluido en el experimento anterior vale de forma **local**.
+    - No hay contradicción con el Principio de Equivalencia concluido anteriormente, ya que este vale de forma **local**.
 
-Consideremos, en el mismo ascensor, dos partículas muy cercanas con posiciones $x^i$ y $x^i + \Delta x^i$.
+Ahora, consideremos en el mismo ascensor, dos partículas muy cercanas con posiciones $x^i$ y $x^i + \Delta x^i$.
 
 ---
 
@@ -191,11 +201,11 @@ Consideremos, en el mismo ascensor, dos partículas muy cercanas con posiciones 
 
 ## **El Tensor de Marea**
 
-Las ecuaciones de movimiento difieren debido a las variaciones en el campo gravitacional:
+El movimiento de cada partícula en presencia del campo gravitacional está dada por la 2da ley de Newton:
 
 $$ \frac{d^2 x^i}{dt^2} = -\partial^i \Phi $$
 
-Luego, para la separación $\Delta x^i$ entre las partículas tenemos:
+Aplicando esto a cada partícula, y expandiendo en serie de Taylor respecto a la separación $\Delta x^i$ entre las partículas:
 
 $$ \frac{d^2 \Delta x_i}{dt^2} = -\Delta x^j (\partial_j \partial_i \Phi)$$
 
@@ -203,15 +213,15 @@ $$ \frac{d^2 \Delta x_i}{dt^2} = -\Delta x^j (\partial_j \partial_i \Phi)$$
 
 ## **El Tensor de Marea**
 
-Este efecto es conocido como **fuerza de marea**, y su intensidad está caracterizada por el **tensor de marea**:
+Este efecto es conocido como **fuerza de marea**, y su magnitud está caracterizada por el **tensor de marea**:
 
 $$ R_{ij} \equiv \partial_i \partial_j \Phi $$
 
-El cual se asocia a la **ecuación de marea**:
+el cual se asocia a la **ecuación de marea**:
 
 $$ \frac{d^2 \Delta x^i}{dt^2} = -R^i_{\ j} \Delta x^j $$
 
-Físicamente, este tensor **mide cómo la gravedad estira y comprime** los objetos en caída libre.
+Físicamente, este tensor mide como un campo gravitacional no uniforme **estira y comprime** los objetos en caída libre.
 
 ---
 
@@ -225,7 +235,7 @@ Luego, podemos reescribir la ecuación de Poisson como:
 
 $$  R^{i}_{i} = 4\pi G \rho $$
 
-Esta forma alternativa de la ecuación de Poisson será más cercana en forma a las ecuaciones de la Relatividad General.
+Esta forma alternativa de la ecuación de Poisson será más cercana en forma a las ecuaciones de Einstein de la Relatividad General.
 
 ---
 
@@ -240,9 +250,10 @@ Esta forma alternativa de la ecuación de Poisson será más cercana en forma a 
 
 ---
 
-## **Limitaciones de la Gravedad Newtoniana**
-- No explica experimentos tales como:
-  - La desviación de la luz debido a la presencia de objetos masivos.
+## **Conclusiones**
+- La gravedad Newtoniana puede entenderse en términos de **un campo gravitacional**, el que satisface la **ecuación de Poisson**.
+- Sin embargo, esta no explica experimentos tales como:
+  - La desviación de la luz debido a la gravedad.
   - La precesión del perihelio de Mercurio.
 - No es relativista (incompatible con la Relatividad Especial).
 - No describe correctamente objetos compactos como agujeros negros.
