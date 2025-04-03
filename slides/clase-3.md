@@ -40,7 +40,6 @@ style: |
 ## **Plan de la Clase**
 - La ecuación de Poisson para el potencial gravitacional y algunas soluciones.
 - Gravedad vs aceleración.
-- La ecuación de marea y conexión con Relatividad General.
 
 ---
 
