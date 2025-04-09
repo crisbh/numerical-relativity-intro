@@ -1,7 +1,7 @@
 ---
 marp: true
-math: katex
 paginate: true
+math: katex
 html: true
 style: |
   section {
@@ -9,177 +9,143 @@ style: |
     font-family: 'Arial', sans-serif;
     overflow: hidden;
   }
+  img {
+    display: block;
+    margin: auto;
+    width: 60%;
+    max-width: 100%;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: black;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 ---
 
-
-# **La Gravedad de Einstein**
+# **El tensor de marea**
 ## Clase 4
 
 ---
 
-## **Objetivos de la Clase**
-- Comprender la motivación para reformular la gravedad Newtoniana.
-- Introducir la idea de la curvatura del espacio-tiempo.
-- Definir la métrica como el objeto fundamental en la Relatividad General.
-- Explorar el intervalo espaciotemporal y la métrica de Minkowski.
+## **Plan de la Clase**
+- La ecuación de marea y conexión con Relatividad General.
+- Los tensores en física.
+- Operaciones básicas con tensores.
 
 ---
 
-## **Más allá de la Gravedad Newtoniana**
+## **Experimento del ascensor**
 
-- En la gravedad Newtoniana, la equivalencia entre masa inercial y gravitacional es un **hecho experimental**, sin una justificación fundamental.
-- **Einstein** vio esto como un indicio de una estructura más profunda.
-- En lugar de depender de las propiedades individuales de los objetos, la gravedad debe ser una propiedad del **espacio-tiempo mismo**.
-
----
-
-## **El Experimento Mental de Einstein**
-
-- Consideremos dejar caer simultáneamente un **algodón** y una **bola de billar**.
-- A pesar de sus masas muy diferentes, ambos caen exactamente a la misma velocidad.
-- ¿Qué tienen en común? **El espacio-tiempo a través del cual caen.**
-- Einstein propuso que la **curvatura del espacio-tiempo** es lo que afecta el movimiento de los objetos, no una fuerza gravitacional en sí misma.
-
----
-
-## **Curvatura y Geodésicas**
-
-- En la Relatividad General, la gravedad no es una fuerza.
-- En cambio, los objetos siguen las trayectorias **más rectas posibles** en un espacio-tiempo curvo.
-- Estas trayectorias se llaman **geodésicas**.
-
-**Ejemplo:**
-- En la Tierra, la ruta más corta entre dos puntos no es una línea recta en un mapa plano, sino un arco de un círculo máximo.
-- De manera similar, los objetos siguen geodésicas en el espacio-tiempo curvo.
-
----
-
-## **La Métrica del Espacio-Tiempo**
-
-- Para medir la curvatura, primero debemos definir **cómo medir distancias.**
-- La métrica es una herramienta que traduce diferencias en coordenadas a distancias físicas.
-- En general, el **elemento de línea** se expresa como:
-
-$$ ds^2 = g_{ab} dx^a dx^b $$
-
-donde $g_{ab}$ es el **tensor métrico**, que define la geometría del espacio-tiempo. En RG, la métrica juega el mismo papel que el potencial gravitacional en la teoría de Newton.
-
----
-
-## **El Espaciotiempo de Minkowski**
-
-- Un caso especial es el espacio-tiempo **plano**, descrito por la métrica de Minkowski:
-
-$$ g_{ab} = \eta_{ab} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} $$
-
-- En coordenadas cartesianas $(t, x, y, z)$, tenemos:
-
-$$ ds^2 = -dt^2 + dx^2 + dy^2 + dz^2 $$
-
-<!-- - Es la versión relativista del **Teorema de Pitágoras**. -->
-
----
-
-## **Tipos de Intervalos en Espaciotiempo**
-
-Dependiendo del signo de $ds^2$, tenemos diferentes tipos de separación entre eventos:
-
-1. **Intervalo Espacial ($ds^2 > 0$)**
-   - Predomina la separación en espacio.
-   - Puede medirse con **reglas o metros.**
-
----
-
-## **Tipos de Intervalos en Espaciotiempo**
-
-2. **Intervalo Temporal ($ds^2 < 0$)**
-   - Predomina la separación en tiempo.
-   - Puede medirse con **relojes.**
-   - Solo objetos con masa pueden seguir trayectorias de este tipo.
-
-3. **Intervalo Nulo ($ds^2 = 0$)**
-   - Separación seguida por la luz.
-   - Define los **conos de luz**, fundamentales en la causalidad.
-
----
-
-## **Cono de Luz y Causalidad**
-
-- En un diagrama espacio-tiempo, los eventos que pueden estar causalmente conectados deben estar dentro del **cono de luz**.
-- Los eventos **fuera del cono de luz** no pueden afectarse mutuamente.
-- Esto define el concepto de **causalidad en Relatividad Especial y General**.
-
----
-
-## **Cono de Luz y Causalidad**
-
-**Ejemplo:**
-- Dos eventos separados por un intervalo **espacial** no pueden afectarse entre sí, ya que ningún objeto con masa puede viajar más rápido que la luz.
-
----
-
-## **Coordenadas Esféricas**
-
-Podemos transformar la métrica de Minkowski a coordenadas esféricas $(t, R, \theta, \phi)$, obteniendo:
-
-$$ g_{ab} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & R^2 & 0 \\ 0 & 0 & 0 & R^2 \sin^2\theta \end{bmatrix} $$
-
-El elemento de línea asociado es:
-
-$$ ds^2 = -dt^2 + dR^2 + R^2 d\theta^2 + R^2 \sin^2\theta d\phi^2 $$
-
-O usando el ángulo sólido $d\Omega^2$:
-
-$$ ds^2 = -dt^2 + dR^2 + R^2 d\Omega^2, $$
-
-con:
-
-$$ d\Omega^2 = d\theta^2 + \sin^2\theta d\phi^2. $$
-
----
-
-## **Coordenadas Esféricas**
-
-Podemos medir la distancia propia desde el origen hasta un punto con coordenada radial $R$:
-
-- Elegimos un camino a **tiempo constante** y sin cambios angulares ($dt = d\theta = d\phi = 0$).
-- A partir de la métrica:
-
-$$ dl = \sqrt{ds^2} = dR $$
-
----
-
-## **Coordenadas Esféricas**
-
-- Integrando:
-
-$$ l = \int_0^R dR' = R. $$
-
-Este resultado es consistente con nuestra intuición de la distancia en coordenadas esféricas.
+![width:60%](images/ascensor-exp.webp)
 
 
 ---
 
-## **Resumen de la Clase**
+## **Experimento del ascensor**
 
-- La equivalencia entre masas inercial y gravitacional llevó a Einstein a considerar que la gravedad es una propiedad del **espacio-tiempo**.
-- En lugar de fuerzas, los objetos se mueven en **geodésicas** dentro del espacio-tiempo curvo.
-- El **tensor métrico** define la geometría del espacio-tiempo y reemplaza al potencial gravitacional de Newton.
-- La métrica de Minkowski describe un espacio-tiempo plano y define intervalos espacio-temporales.
-- Los **conos de luz** delimitan la causalidad en Relatividad.
+
+![Experimento del ascensor](images/luz-ascensor.jpg)
+
+
+---
+
+## **El Principio de Equivalencia de Einstein**
+
+En base a este experimento mental, Einstein postuló que:
+
+*Localmente, ningún experimento puede distinguir entre un campo gravitacional, y un sistema de referencia acelerado en ausencia de gravedad.*
+
+
+
+---
+
+## **Experimento del ascensor**
+
+- Se puede llegar a detectar de alguna forma el campo gravitacional en el experimento del ascensor?
+- **Sí es posible medirlo**, pero se requiere realizar una medición **en un entorno** (región) dentro del ascensor.
+    - No hay contradicción con el Principio de Equivalencia, ya que este vale de forma **local**.
+
+Ahora, consideremos en el mismo ascensor, dos partículas muy cercanas con posiciones $x^i$ y $x^i + \Delta x^i$.
+
+---
+
+![Tidal forces](images/elevator-tidal-forces.png)
+
+---
+
+## **El Tensor de Marea**
+
+El movimiento de cada partícula en presencia del campo gravitacional está dada por la 2da ley de Newton:
+
+$$ \frac{d^2 x^i}{dt^2} = -\partial^i \Phi $$
+
+Aplicando esto a cada partícula, y expandiendo en serie de Taylor respecto a la separación $\Delta x^i$ entre las partículas:
+
+$$ \frac{d^2 \Delta x_i}{dt^2} = -\Delta x^j (\partial_j \partial_i \Phi)$$
+
+---
+
+## **El Tensor de Marea**
+
+Este efecto es conocido como **fuerza de marea**, y su magnitud está caracterizada por el **tensor de marea**:
+
+$$ R_{ij} \equiv \partial_i \partial_j \Phi $$
+
+el cual se asocia a la **ecuación de marea**:
+
+$$ \frac{d^2 \Delta x^i}{dt^2} = -R^i_{\ j} \Delta x^j $$
+
+Físicamente, este tensor mide como un campo gravitacional no uniforme **estira y comprime** los objetos en caída libre.
+
+---
+
+## **Relación con la Ecuación de Poisson**
+
+Notar que, en coordenadas cartesianas:
+
+$$ \nabla^2 \Phi = \partial^x\partial_x \Phi + \partial^y\partial_y \Phi +  \partial^z\partial_z \Phi = R^{i}_{i}$$
+
+Luego, podemos reescribir la ecuación de Poisson como:
+
+$$  R^{i}_{i} = 4\pi G \rho $$
+
+Esta forma alternativa de la ecuación de Poisson será más cercana en forma a las ecuaciones de Einstein de la Relatividad General.
+
+---
+
+## **Analogía con la Relatividad General**
+
+| Cantidad | Gravedad Newtoniana | Relatividad General |
+|---|---|---|
+| Campo fundamental | Potencial $\Phi$ | Métrica $g_{\mu\nu}$ |
+| Ecuación de movimiento | $\partial_i \Phi$ | Símbolos de Christoffel $\Gamma^\mu_{\alpha\beta}(g_{\mu\nu},\partial g_{\mu\nu}$) |
+| Tensor de marea | $\partial_i \partial_j \Phi$ | Tensor de Riemann $R^\rho_{\sigma\mu\nu}$ |
+| Ecuación de campo | $\nabla^2 \Phi = 4\pi G \rho$ | $G_{\mu\nu} = 8\pi G T_{\mu\nu}$ |
+
+---
+
+## **Conclusiones**
+- La gravedad Newtoniana puede entenderse en términos de **un campo gravitacional**, el que satisface la **ecuación de Poisson**.
+- Sin embargo, esta no explica experimentos tales como:
+  - La desviación de la luz debido a la gravedad.
+  - La precesión del perihelio de Mercurio.
+- No es relativista (incompatible con la Relatividad Especial).
+- No describe agujeros negros.
+- No predice las ondas gravitacionales.
 
 ---
 
 ## **Ejercicios Propuestos**
-1. Partiendo de la métrica de Minkowski, derivar la expresión del intervalo espaciotemporal en coordenadas esféricas.
-2. Mostrar que el intervalo es **invariante bajo transformaciones de coordenadas**.
-
----
-
-## **Próxima Clase: Curvatura y la Relatividad General**
-
-- Introducción a la conexión de Levi-Civita y la derivada covariante.
-- Concepto de transporte paralelo.
-- Cálculo de los símbolos de Christoffel.
-
----
+1. Derivar la ecuación de Poisson para el campo gravitacional a partir de las leyes de la gravedad Newtoniana.
+2. Calcular el tensor de marea para una masa puntual.
+<!-- 3. Comparar la aceleración de caída libre en diferentes marcos de referencia. -->
