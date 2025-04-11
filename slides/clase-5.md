@@ -1,7 +1,7 @@
 ---
 marp: true
-math: katex
 paginate: true
+math: katex
 html: true
 style: |
   section {
@@ -9,170 +9,251 @@ style: |
     font-family: 'Arial', sans-serif;
     overflow: hidden;
   }
+  img {
+    display: block;
+    margin: auto;
+    width: 60%;
+    max-width: 100%;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: black;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 ---
 
-
-# **La ecuación geodésica**
+# **Notación Tensorial**
 ## Clase 5
 
 ---
 
-## **Objetivos de la Clase**
-- Entender la ecuación geodésica y su relación con el movimiento libre.
-- Introducir la derivada covariante y los símbolos de Christoffel.
-- Definir el tensor de Riemann y su papel en la curvatura del espacio-tiempo.
-- Relacionar la ecuación de desviación geodésica con la curvatura.
+## **Plan de la Clase**
+- Formalismo tensorial.
+- El tensor métrico.
 
 ---
 
-## **Las geodésicas**
-- En RG, los cuerpos en **caída libre** siguen **geodésicas**, que son trayectorias que extremizan la acción.
-- **Principio de Fermat**: La luz sigue el camino que minimiza el tiempo de viaje.
-- **Extensión de Einstein**: Los cuerpos con masa siguen trayectorias que **maximizan el tiempo propio**.
-- Ejemplo: **Paradoja de los gemelos** → El gemelo viajero envejece menos.
+## **¿Por qué usar tensores?**
+- Los tensores son fundamentales en la Relatividad General (RG) y en diversas ramas de la física teórica.
+- **Pricipio de Relatividad de Einstein**: las leyes de la Física deben ser las mismas en todos los sistemas de coordenadas.
+     - Las coordenadas son simplemente etiquetas para eventos. No tienen sentido físico.
+     - Los tensores permiten escribir ecuaciones en forma **covariante** (independiente de las coordenadas), e.g.,:
+  $$
+  G_{\mu\nu} = 8\pi G T_{\mu\nu}
+  $$
 
 ---
 
-## **La cuadri-velocidad**
-- En el espacio tridimensional, la velocidad está definida como $v^i = \frac{dx^i}{dt}$.
-- Analogamente, en espacio-tiempo 4D, definimos la **cuadri-velocidad** como:
+## **Los Tensores**
 
-  $$ u^a = \frac{dx^a}{d\tau} $$
-
-- Donde $\tau$ es el **tiempo propio** del observador.
-
----
-
-## **La cuadri-velocidad**
-
-**Ejercicio:**  
-Demostrar que la norma de la cuatro-velocidad es:
-
-  $$ u^a u_a = -1 $$
+- Un **tensor** es un objeto matemático que generaliza **vectores y matrices**.
+- Formalmente, se caracterizan por su comportamiento bajo *transformaciones de coordenadas*.
+- Se describen usando índices, por ejemplo:
+  - Escalar: sin índice, $\Phi$
+  - Vector: un índice, $v^a$ o $v_a$
+  - Matriz o tensor de rango-2: dos índices, $T^{ab}$, $T_{ab}$, $T^a_{b}$, $\dots$
 
 ---
 
-## **Ecuación Geodésica: La Generalización del Movimiento Rectilíneo**
-- En mecánica clásica, una partícula libre sigue:
+## **Tipos de Tensores**
 
-  $$ \frac{dv^i}{dt} = 0 $$
-
-- En espacio-tiempo curvo, extendemos esto a:
-
-  $$ \frac{Du^a}{D\tau} = 0 $$
-
-  o bien,
-
-  $$ u^b \nabla_b u^a = 0 $$
-
-- Esta es la **ecuación geodésica**, que describe el movimiento de una partícula en caída libre.
+Los tensores pueden clasificarse de acuerdo a su *rango*:
+- **Escalar ($T^0$):** Un número que no cambia con las coordenadas.
+- **Vector ($T^1$):** Un objeto con una única fila o columna de componentes.
+- **Tensor de rango 2 ($T^2$):** Una matriz que obedece transformaciones tensoriales.
+- **Tensor de rango superior ($T^n$):** Generalización a múltiples índices.
 
 ---
 
-## **La Derivada Covariante**
-- Para un **escalar** $f$, la derivada es simplemente:
+## **Índices Covariantes y Contravariantes**
 
-  $$ \frac{df}{dx^a} $$
+- **Índices superiores** $v^a$: denominados **contravariantes**. Representan componentes de un vector.
+- **Índices inferiores** $v_a$: denominados **covariantes**. Representan componentes de un covector.
 
-- Para un **vector**, no es suficiente tomar derivadas parciales porque los vectores pueden cambiar su orientación al moverse en un espacio curvo.
----
-
-## **La Derivada Covariante**
-
-- Introducimos la **derivada covariante**:
-
-  $$ \nabla_b u^a $$
-
-- Esta operación toma en cuenta la curvatura del espacio-tiempo.
+El tipo de índice determina la forma en que los objetos se transforman bajo cambios de coordenadas.
 
 ---
 
-## **Símbolos de Christoffel y la Derivada Covariante**
-- Los **símbolos de Christoffel** permiten expresar la derivada covariante:
+## **Notación de Einstein (Suma Implícita)**
 
-  $$ \nabla_a V^b = \partial_a V^b + \Gamma^b_{ac} V^c $$
+- En Física, es muy común utilizar la notación de Einstein:
+  - **Índice repetido implica suma sobre ese índice.**
+- Por ejemplo, para un vector $v^a$ y un *covector* $w_a$:
 
-- Donde los símbolos de Christoffel están dados por:
+$$
+v^a w_a \equiv \sum_{a=1}^{n} v^a w_a
+$$
 
-  $$ \Gamma^a_{bc} = \frac{1}{2} g^{ad} (\partial_c g_{db} + \partial_b g_{dc} - \partial_d g_{bc}) $$
+- Ejemplo en 3 dimensiones:
 
-- Los símbolos de Christoffel dependen de **las primeras derivadas de la métrica**.
+$$
+v^a w_a = v^1 w_1 + v^2 w_2 + v^3 w_3
+$$
 
----
+<!-- Esta notación simplifica expresiones tensoriales y evita símbolos de suma explícitos. -->
 
-## **La Ecuación de Desviación Geodésica**
-- Para analizar la curvatura del espacio-tiempo, estudiamos la desviación entre **dos geodésicas cercanas**.
-- Esto es análogo al análisis Newtoniano del **tensor de marea**.
-
-El resultato en RG para la **desviación geodésica** es:
-
-$$ \frac{D^2 x^a}{D\tau^2} = - R^a{}_{bcd} u^b u^d x^c $$
-
-Donde $R^a{}_{bcd}$ es el **tensor de Riemann**.
 
 ---
 
-## **El Tensor de Riemann y la Curvatura**
-- El tensor de Riemann contiene **segundas derivadas de la métrica**:
+## **Operaciones Tensoriales**
 
-$$ R^a{}_{bcd} = \partial_c \Gamma^a_{bd} - \partial_d \Gamma^a_{bc} + \Gamma^e_{bd} \Gamma^a_{ec} - \Gamma^e_{bc} \Gamma^a_{ed} $$
+**1. Contracción**:
 
-- Si $R^a{}_{bcd} = 0$, el espacio-tiempo es **plano**.
-- Este tensor es responsable de **las fuerzas de marea** en relatividad general.
+- Reduce el rango del tensor en 2, sumando índices superior e inferior iguales:
 
----
+$$
+T^a_{\ a} = \sum_a T^a_{\ a}
+$$
 
-## **Simetrías del Tensor de Riemann**
-El tensor de Riemann satisface las siguientes simetrías:
+Ejemplo:
 
-1. **Antisimetría en los dos últimos índices:**
-   $$
-   R^a{}_{bcd} = -R^a{}_{bdc}
-   $$
-2. **Antisimetría en el primer y tercer par de índices:**
-   $$
-   R_{abcd} = -R_{bacd}
-   $$
-3. **Identidad de Bianchi (importante en ecuaciones de Einstein):**
-   $$
-   \nabla_{[e} R^a{}_{|b|cd]} = 0
-   $$
+$$
+R^a_{\ bad} = R_{bd} \quad\text{(Tensor de Riemann $\to$ Tensor de Ricci)}
+$$
 
 ---
 
-## **Transporte Paralelo y Curvatura**
-- En un espacio plano, un vector **transportado en paralelo** en un lazo cerrado regresa idéntico.
-- En un espacio curvo, **cambia su dirección**.
-- Esto motiva la **definición geométrica** del tensor de Riemann.
+## **Operaciones Tensoriales**
 
-![Placeholder para figura del libro sobre transporte paralelo]
+**2. Producto tensorial (producto exterior)**:
 
----
+- Combina tensores para aumentar su rango:
 
-## **Ejemplo: Curvatura en la Superficie de una Esfera**
-- Sobre una esfera, un vector transportado paralelo **no regresa igual** después de recorrer un lazo cerrado.
-- Este cambio es medido por el **tensor de Riemann**.
+$$
+A^a B^b = T^{ab}
+$$
 
----
+**3. Producto escalar (producto interno)**:
 
-## **Ejercicios Propuestos**
-1. Demostrar que el tensor de Riemann tiene 20 componentes independientes en 4D.
-2. Calcular explícitamente el tensor de Riemann para la métrica de Minkowski y verificar que es cero.
-3. Derivar la ecuación de desviación geodésica a partir de la ecuación de las geodésicas.
+- Producto de un vector y covector:
+
+$$
+v^a w_a
+$$
 
 ---
 
-## **Resumen de la Clase**
-- La **ecuación de desviación geodésica** nos da una medida de la curvatura del espacio-tiempo.
-- El **tensor de Riemann** contiene toda la información sobre la curvatura.
-- Las **identidades de Bianchi** jugarán un papel clave en las ecuaciones de Einstein.
-- La curvatura puede visualizarse a través del **transporte paralelo** de vectores en un lazo cerrado.
+## **Ejemplo: Contracción y Producto Escalar**
+
+- Dados $v^a = (1,2,3)$, $w_a = (4,5,6)$:
+
+Producto escalar:
+
+$$
+v^a w_a = (1)(4) + (2)(5) + (3)(6) = 32
+$$
+
+Contracción del tensor $T^a_{\ b}$:
+
+$$
+T^a_{\ b} = 
+\begin{pmatrix}
+1 & 2 & 3\\
+0 & 4 & 5\\
+7 & 8 & 9
+\end{pmatrix}
+$$
 
 ---
 
-## **Próxima Clase: Introducción a la Conexión de Levi-Civita**
-- Propiedades de la conexión.
-- Transporte paralelo y símbolos de Christoffel.
-- Aplicación a la ecuación geodésica.
+## **Ejemplo: Contracción y Producto Escalar**
 
+Contracción $T^a_{\ a}$:
+
+$$
+T^a_{\ a} = T^1_{\ 1} + T^2_{\ 2} + T^3_{\ 3} = 1 + 4 + 9 = 14
+$$
+
+Notar que este tipo de contracción equivale a tomar **la traza** del tensor.
+
+---
+
+## **Ejemplo: Producto Tensorial**
+Dado los vectores:
+
+$$ A^\mu = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad B^\nu = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} $$
+
+El producto tensorial es:
+
+$$ C^{\mu\nu} = A^\mu B^\nu $$
+
+---
+## **Ejemplo: Producto Tensorial**
+
+$$
+C^{\mu\nu} = \begin{bmatrix} 1 \times 4 & 1 \times 5 & 1 \times 6 \\
+2 \times 4 & 2 \times 5 & 2 \times 6 \\
+3 \times 4 & 3 \times 5 & 3 \times 6 \end{bmatrix}
+= \begin{bmatrix} 4 & 5 & 6 \\
+8 & 10 & 12 \\
+12 & 15 & 18 \end{bmatrix}
+$$
+
+---
+
+## **Simetría y Antisimetría**
+
+- Existen ciertos tensores que satisfacen propiedades de simetría:
+
+**Tensor simétrico**:
+
+$$
+S_{ab} = S_{ba}
+$$
+
+**Tensor antisimétrico**:
+
+$$
+A_{ab} = -A_{ba}, \quad A_{aa} = 0
+$$
+
+---
+
+## **Los tensores y la geometría**
+
+- Los tensores (escalares, campos vectoriales, campos tensoriales) son en general funciones de las coordenadas:
+   - Sus valores pueden variar de punto a punto en el espacio y tiempo, e.g., $\Phi$, $\vec{g}$, $\vec{E}$, $\vec{x}$, $\vec{v}$ ...
+- Por lo tanto, los tensores no son objetos abstractos que "viven en el vacío": están definidos sobre un *espacio(-tiempo)*.
+
+   Además de tensores que representan "cantidades físicas", la geometría del espacio(-tiempo) tiene sus propios tensores.
+
+---
+
+## **El tensor métrico**
+
+- Existe un tensor muy especial, el **tensor métrico**: $g_{ab}$.
+- Dado un tensor métrico $g_{ab}$, podemos bajar índices:
+
+$$
+v_a = g_{ab} v^b
+$$
+
+- Con el tensor métrico inverso $g^{ab}$, podemos subir índices:
+
+$$
+w^a = g^{ab} w_b
+$$
+
+El tensor métrico es **simétrico** , y actúa como un **mapa entre vectores y covectores**.
+
+---
+
+## **Resumen: Operaciones Tensoriales**
+
+| Operación | Notación | Resultado |
+|-----------|----------|---------|
+| Producto tensorial | $A^a B^b$  | aumenta rango |
+| Contracción |  $T^a_{\ a}$ | reduce rango en 2 |
+| Producto escalar | $v^a w_a$ | resultado escalar |
+| Subir/Bajar índices | $v_a = g_{ab} v^b$ | índice cambia posición |
 

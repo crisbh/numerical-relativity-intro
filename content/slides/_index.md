@@ -9,7 +9,7 @@ description: "Clases del curso"
 - [Clase 2: Gravedad Newtoniana - parte 1](clase-2.html)
 - [Clase 3: Gravedad Newtoniana - parte 2](clase-3.html)
 - [Clase 4: El tensor de marea](clase-4.html)
-<!-- - [Clase 4: El espaciotiempo y la métrica](clase-4.html) -->
+- [Clase 5: Notación tensorial](clase-5.html)
 <!-- - [Clase 5: La ecuación geodésica](clase-5.html) -->
 <!-- - [Clase 6: Las ecuaciones de Einstein](clase-6.html) -->
 <!-- - [Clase 7: La solución de agujero negro](clase-7.html) -->

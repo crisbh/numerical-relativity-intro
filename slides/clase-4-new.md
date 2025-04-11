@@ -6,7 +6,7 @@ html: true
 ---
 
 # **Formalismo Tensorial: Álgebra y Operaciones Básicas**
-## Clase 3
+## Clase 4
 
 ---
 
@@ -15,6 +15,17 @@ html: true
 - Definir las operaciones básicas con tensores.
 - Explorar el uso del formalismo tensorial en la Relatividad General.
 - Resolver ejercicios prácticos sobre manipulación de tensores.
+
+---
+
+## **¿Qué es un Tensor?**
+
+- Un **tensor** es un objeto matemático que generaliza **vectores y matrices**.
+- Caracterizado por su comportamiento bajo transformaciones de coordenadas.
+- Se describen usando índices, por ejemplo:
+  - Escalar: sin índice, $\phi$
+  - Vector: un índice, $v^a$ o $v_a$
+  - Matriz o tensor de rango-2: dos índices, $T^{ab}$, $T_{ab}$, $T^a_{b}$, $\dots$
 
 ---
 
@@ -28,6 +39,207 @@ En RG, las coordenadas son simplemente etiquetas para eventos. No tienen sentido
 
 - Permiten describir propiedades físicas de forma independiente del sistema de coordenadas.
   - En RG, permiten escribir ecuaciones en forma **covariante**.
+
+---
+
+## **Definición de Tensor**
+Un tensor es un objeto matemático que transforma según reglas específicas bajo cambios de coordenadas.
+
+Los tensores generalizan los conceptos de escalares, vectores y matrices.
+
+Ejemplo de un tensor de segundo orden:
+
+$$ T'^{\mu \nu} = \Lambda^\mu_{\,\alpha} \Lambda^\nu_{\,\beta} T^{\alpha \beta} $$
+
+donde $\Lambda^\mu_{\,\alpha}$ representa la transformación de coordenadas.
+
+---
+
+## **Tipos de Tensores**
+
+Los tensores pueden clasificarse de acuerdo a su *rango*:
+- **Escalar ($T^0$):** Un número que no cambia con las coordenadas.
+- **Vector ($T^1$):** Un objeto con una única fila o columna de componentes.
+- **Tensor de rango 2 ($T^2$):** Una matriz que obedece transformaciones tensoriales.
+- **Tensor de rango superior ($T^n$):** Generalización a múltiples índices.
+
+
+---
+
+## **Notación de Einstein (Suma Implícita)**
+
+- En muchas áreas de la Física es común utilizar la notación de Einstein:
+  - **Índice repetido implica suma sobre ese índice.**
+- Por ejemplo, para un vector $v^a$ y una covector $w_a$:
+
+$$
+v^a w_a \equiv \sum_{a=1}^{n} v^a w_a
+$$
+
+- Ejemplo en 3 dimensiones:
+
+$$
+v^a w_a = v^1 w_1 + v^2 w_2 + v^3 w_3
+$$
+
+Esta notación simplifica expresiones tensoriales y evita símbolos de suma explícitos.
+
+---
+
+## **Índices Covariantes y Contravariantes**
+
+- **Índices superiores** $v^a$: denominados **contravariantes**. Representan componentes de un vector.
+- **Índices inferiores** $v_a$: denominados **covariantes**. Representan componentes de un covector.
+
+El tipo de índice determina la forma en que los objetos se transforman bajo cambios de coordenadas.
+
+---
+
+## **Operaciones Tensoriales**
+
+**1. Contracción**:
+
+- Reduce el rango del tensor en 2 unidades, sumando índices superior e inferior iguales:
+
+$$
+T^a_{\ a} = \sum_a T^a_{\ a}
+$$
+
+Ejemplo:
+
+$$
+R^a_{\ bad} = R_{bd} \quad\text{(Tensor de Ricci)}
+$$
+
+---
+
+## **Operaciones Tensoriales**
+
+**2. Producto tensorial (producto exterior)**:
+
+- Combina tensores para aumentar su rango:
+
+$$
+A^a B^b = T^{ab}
+$$
+
+**3. Producto escalar (producto interno)**:
+
+- Producto de un vector y covector:
+
+$$
+v^a w_a
+$$
+
+---
+
+## **Ejemplo de Contracción y Producto Escalar**
+
+- Dados $v^a = (1,2,3)$, $w_a = (4,5,6)$:
+
+Producto escalar:
+
+$$
+v^a w_a = (1)(4) + (2)(5) + (3)(6) = 32
+$$
+
+Contracción del tensor $T^a_{\ b}$:
+
+$$
+T^a_{\ b} = 
+\begin{pmatrix}
+1 & 2 & 3\\
+0 & 4 & 5\\
+7 & 8 & 9
+\end{pmatrix}
+$$
+
+---
+
+## **Ejemplo de Contracción y Producto Escalar**
+
+Contracción $T^a_{\ a}$:
+
+$$
+T^a_{\ a} = T^1_{\ 1} + T^2_{\ 2} + T^3_{\ 3} = 1 + 4 + 9 = 14
+$$
+
+---
+
+## **Subir y Bajar Índices**
+
+- Dado un tensor métrico $g_{ab}$, podemos bajar índices:
+
+$$
+v_a = g_{ab} v^b
+$$
+
+- Con el tensor métrico inverso $g^{ab}$, podemos subir índices:
+
+$$
+w^a = g^{ab} w_b
+$$
+
+El tensor métrico actúa como un **mapa entre vectores y covectores**.
+
+---
+
+## **Simetría y Antisimetría**
+
+- Un tensor puede ser **simétrico** o **antisimétrico**:
+
+**Simétrico**:
+
+$$
+S_{ab} = S_{ba}
+$$
+
+**Antisimétrico**:
+
+$$
+A_{ab} = -A_{ba}, \quad A_{aa} = 0
+$$
+
+Ejemplos físicos:
+- Tensor métrico $g_{ab}$ es simétrico.
+- Tensor electromagnético $F_{ab}$ es antisimétrico.
+
+---
+
+## **Resumen: Operaciones Tensoriales**
+
+| Operación | Notación | Ejemplo |
+|-----------|----------|---------|
+| Producto tensorial | $A^a B^b$  | aumenta rango |
+| Contracción |  $T^a_{\ a}$ | reduce rango en 2 |
+| Producto escalar | $v^a w_a$ | resultado escalar |
+| Subir/Bajar índices | $v_a = g_{ab} v^b$ | índice cambia posición |
+
+---
+
+## **Ejercicio de Práctica**
+
+Dado el tensor $T^{ab}$:
+
+$$
+T^{ab} = 
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{pmatrix}
+$$
+
+y el tensor métrico plano \( g_{ab} = \text{diag}(1,1,1) \):
+
+- Calcula la contracción \( T^a_{\ a} \).
+- Calcula \( T_{ab} \) bajando ambos índices con \( g_{ab} \).
+- Verifica si \( T_{ab} \) es simétrico, antisimétrico o ninguno.
+
+---
+
+
+
 
 ---
 ## **Notación de indices**
@@ -59,29 +271,6 @@ $$
 
 Producto interno.
 Producto matricial.
-
----
-
-## **Definición de Tensor**
-Un tensor es un objeto matemático que transforma según reglas específicas bajo cambios de coordenadas.
-
-Los tensores generalizan los conceptos de escalares, vectores y matrices.
-
-Ejemplo de un tensor de segundo orden:
-
-$$ T'^{\mu \nu} = \Lambda^\mu_{\,\alpha} \Lambda^\nu_{\,\beta} T^{\alpha \beta} $$
-
-donde $\Lambda^\mu_{\,\alpha}$ representa la transformación de coordenadas.
-
----
-
-## **Tipos de Tensores**
-
-Los tensores pueden clasificarse de acuerdo a su *rango*:
-- **Escalar ($T^0$):** Un número que no cambia con las coordenadas.
-- **Vector ($T^1$):** Un objeto con una única fila o columna de componentes.
-- **Tensor de rango 2 ($T^2$):** Una matriz que obedece transformaciones tensoriales.
-- **Tensor de rango superior ($T^n$):** Generalización a múltiples índices.
 
 ---
 
@@ -158,8 +347,9 @@ $$ T^\mu_{\,\mu} = \sum_{\mu} T^{\mu\mu}= 1 + 5 + 9 = 15 $$
 ---
 
 ## **Conclusión**
-- El formalismo tensorial es esencial en física teórica y relatividad.
-- Operaciones como la suma, producto tensorial y contracción permiten manipular tensores de forma estructurada.
-- En las próximas clases, estudiaremos la métrica y conexiones en espacios curvos.
-- Veremos también módulos de Python para manipulación de tensores.
+- El formalismo tensorial es esencial en la Física.
+- La notación de Einstein simplifica las expresiones tensoriales
+- Subir y bajar índices requiere el uso del tensor métrico.
+- La contracción permite reducir el rango del tensor.
+- Los tensores pueden tener simetrías importantes en física.
 
