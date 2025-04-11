@@ -39,8 +39,6 @@ style: |
 
 ## **Plan de la Clase**
 - La ecuación de marea y conexión con Relatividad General.
-- Los tensores en física.
-- Operaciones básicas con tensores.
 
 ---
 
