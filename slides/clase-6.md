@@ -33,284 +33,15 @@ style: |
 ---
 
 # **Espaciotiempo y geometría**
-## Clase 5
+## Clase 6
 
 ---
 
 ## **Plan de la Clase**
-- Repaso notación tensorial.
 - El tensor métrico y el elemento de línea.
 - La curvatura del espacio(-tiempo).
 - Ejemplo: la métrica de Minkowski.
 
----
-
-# **Formalismo Tensorial: Álgebra y Operaciones Básicas**
-
----
-
-## **¿Por qué usar tensores?**
-- Los tensores son fundamentales en la Relatividad General (RG) y en diversas ramas de la física teórica.
-- **Pricipio de Relatividad de Einstein**: las leyes de la Física deben ser las mismas en todos los sistemas de coordenadas.
-  - En RG, las coordenadas son simplemente etiquetas para eventos. No tienen sentido físico.
-- En RG, permiten escribir ecuaciones en forma **covariante**.
-
-<!-- - Permiten describir propiedades físicas de forma independiente del sistema de coordenadas. -->
-
-
----
-
-## **Los Tensores**
-
-- Un **tensor** es un objeto matemático que generaliza **vectores y matrices**.
-- Formalmente, se caracterizan por su comportamiento bajo *transformaciones de coordenadas*.
-- Se describen usando índices, por ejemplo:
-  - Escalar: sin índice, $\Phi$
-  - Vector: un índice, $v^a$ o $v_a$
-  - Matriz o tensor de rango-2: dos índices, $T^{ab}$, $T_{ab}$, $T^a_{b}$, $\dots$
-
----
-
-## **Tipos de Tensores**
-
-Los tensores pueden clasificarse de acuerdo a su *rango*:
-- **Escalar ($T^0$):** Un número que no cambia con las coordenadas.
-- **Vector ($T^1$):** Un objeto con una única fila o columna de componentes.
-- **Tensor de rango 2 ($T^2$):** Una matriz que obedece transformaciones tensoriales.
-- **Tensor de rango superior ($T^n$):** Generalización a múltiples índices.
-
----
-
-## **Índices Covariantes y Contravariantes**
-
-- **Índices superiores** $v^a$: denominados **contravariantes**. Representan componentes de un vector.
-- **Índices inferiores** $v_a$: denominados **covariantes**. Representan componentes de un covector.
-
-El tipo de índice determina la forma en que los objetos se transforman bajo cambios de coordenadas.
-
----
-
-## **Notación de Einstein (Suma Implícita)**
-
-- En Física, es muy común utilizar la notación de Einstein:
-  - **Índice repetido implica suma sobre ese índice.**
-- Por ejemplo, para un vector $v^a$ y un *covector* $w_a$:
-
-$$
-v^a w_a \equiv \sum_{a=1}^{n} v^a w_a
-$$
-
-- Ejemplo en 3 dimensiones:
-
-$$
-v^a w_a = v^1 w_1 + v^2 w_2 + v^3 w_3
-$$
-
-<!-- Esta notación simplifica expresiones tensoriales y evita símbolos de suma explícitos. -->
-
-
----
-
-## **Operaciones Tensoriales**
-
-**1. Contracción**:
-
-- Reduce el rango del tensor en 2, sumando índices superior e inferior iguales:
-
-$$
-T^a_{\ a} = \sum_a T^a_{\ a}
-$$
-
-Ejemplo:
-
-$$
-R^a_{\ bad} = R_{bd} \quad\text{(Tensor de Ricci)}
-$$
-
----
-
-## **Operaciones Tensoriales**
-
-**2. Producto tensorial (producto exterior)**:
-
-- Combina tensores para aumentar su rango:
-
-$$
-A^a B^b = T^{ab}
-$$
-
-**3. Producto escalar (producto interno)**:
-
-- Producto de un vector y covector:
-
-$$
-v^a w_a
-$$
-
----
-
-## **Ejemplo: Contracción y Producto Escalar**
-
-- Dados $v^a = (1,2,3)$, $w_a = (4,5,6)$:
-
-Producto escalar:
-
-$$
-v^a w_a = (1)(4) + (2)(5) + (3)(6) = 32
-$$
-
-Contracción del tensor $T^a_{\ b}$:
-
-$$
-T^a_{\ b} = 
-\begin{pmatrix}
-1 & 2 & 3\\
-0 & 4 & 5\\
-7 & 8 & 9
-\end{pmatrix}
-$$
-
----
-
-## **Ejemplo: Contracción y Producto Escalar**
-
-Contracción $T^a_{\ a}$:
-
-$$
-T^a_{\ a} = T^1_{\ 1} + T^2_{\ 2} + T^3_{\ 3} = 1 + 4 + 9 = 14
-$$
-
-Notar que este tipo de contracción equivale a tomar **la traza** del tensor.
-
----
-
-## **Ejemplo: Producto Tensorial**
-Dado los vectores:
-
-$$ A^\mu = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad B^\nu = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} $$
-
-El producto tensorial es:
-
-$$ C^{\mu\nu} = A^\mu B^\nu $$
-
----
-## **Ejemplo: Producto Tensorial**
-
-$$
-C^{\mu\nu} = \begin{bmatrix} 1 \times 4 & 1 \times 5 & 1 \times 6 \\
-2 \times 4 & 2 \times 5 & 2 \times 6 \\
-3 \times 4 & 3 \times 5 & 3 \times 6 \end{bmatrix}
-= \begin{bmatrix} 4 & 5 & 6 \\
-8 & 10 & 12 \\
-12 & 15 & 18 \end{bmatrix}
-$$
-
----
-
-## **Simetría y Antisimetría**
-
-- Existen ciertos tensores que satisfacen propiedades de simetría:
-
-**Tensor simétrico**:
-
-$$
-S_{ab} = S_{ba}
-$$
-
-**Tensor antisimétrico**:
-
-$$
-A_{ab} = -A_{ba}, \quad A_{aa} = 0
-$$
-
----
-
-## **Los tensores y la geometría**
-
-- Los tensores (escalares, campos vectoriales, campos tensoriales) son en general funciones de las coordenadas:
-   - Sus valores pueden variar de punto a punto en el espacio y tiempo, e.g., $\Phi$, $\vec{g}$, $\vec{E}$, $\vec{x}$, $\vec{v}$ ...
-- Por lo tanto, los tensores no son objetos abstractos que "viven en el vacío": están definidos sobre un *espacio(-tiempo)*.
-
-   Además de tensores que representan "cantidades físicas", la geometría del espacio(-tiempo) tiene sus propios tensores.
-
----
-
-## **El tensor métrico**
-
-- Existe un tensor muy especial, el **tensor métrico**: $g_{ab}$.
-- Dado un tensor métrico $g_{ab}$, podemos bajar índices:
-
-$$
-v_a = g_{ab} v^b
-$$
-
-- Con el tensor métrico inverso $g^{ab}$, podemos subir índices:
-
-$$
-w^a = g^{ab} w_b
-$$
-
-El tensor métrico es **simétrico** , y actúa como un **mapa entre vectores y covectores**.
-
-
----
-
-## **Resumen: Operaciones Tensoriales**
-
-| Operación | Notación | Resultado |
-|-----------|----------|---------|
-| Producto tensorial | $A^a B^b$  | aumenta rango |
-| Contracción |  $T^a_{\ a}$ | reduce rango en 2 |
-| Producto escalar | $v^a w_a$ | resultado escalar |
-| Subir/Bajar índices | $v_a = g_{ab} v^b$ | índice cambia posición |
-
-<!-- --- -->
-<!---->
-<!-- ## **Ejercicio** -->
-<!---->
-<!-- Dado el tensor $T^{ab}$: -->
-<!-- $$ -->
-<!-- T^{ab} =  -->
-<!-- \begin{pmatrix} -->
-<!-- 1 & 2 & 3 \\ -->
-<!-- 4 & 5 & 6 \\ -->
-<!-- 7 & 8 & 9 -->
-<!-- \end{pmatrix} -->
-<!-- $$ -->
-<!---->
-<!-- y el tensor métrico plano $g_{ab} = \text{diag}(1,1,1)$: -->
-<!---->
-<!-- - Calcular la contracción $T^a_{\ a}$. -->
-<!-- - Calcular $T_{ab}$ bajando ambos índices con $g_{ab}$. -->
-<!-- - Verificar si $T_{ab}$ es simétrico, antisimétrico o ninguno. -->
-
-<!-- --- -->
-<!---->
-<!-- ## **La Métrica del Espaciotiempo** -->
-<!-- Un tensor fundamental en Relatidad es la **métrica del espaciotiempo** $g_{\mu\nu}$. -->
-<!---->
-<!-- - Define la distancia entre eventos en el espaciotiempo. -->
-<!-- - En Relatividad Especial, en coordenadas cartesianas: -->
-<!--   $$ g_{\mu\nu} \equiv \eta_{\mu\nu} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} $$ -->
-<!---->
-<!-- --- -->
-<!---->
-<!-- ## **La Métrica del Espaciotiempo** -->
-<!-- - Permite calcular productos escalares en espacio-tiempo: -->
-<!--   $$ ds^2 = g_{\mu\nu} dx^{\mu} dx^{\nu} $$ -->
-<!-- - En próximas clases, veremos su papel en la Relatividad General. -->
-<!---->
-<!---->
-<!---->
-<!-- --- -->
-<!---->
-<!-- ## **Conclusión** -->
-<!-- - El formalismo tensorial es esencial en la Física. -->
-<!-- - La notación de Einstein simplifica las expresiones tensoriales -->
-<!-- - Subir y bajar índices requiere el uso del tensor métrico. -->
-<!-- - La contracción permite reducir el rango del tensor. -->
-<!---->
-<!---->
 ---
 
 ## **Hacia la Relatividad General**
@@ -322,43 +53,126 @@ El tensor métrico es **simétrico** , y actúa como un **mapa entre vectores y 
 
 ---
 
+## **La métrica**
+
+- Una **métrica** es una herramienta para medir **distancias** en un espacio.
+- En coordenadas, se representa por el **elemento de línea**:
+
+$$
+ds^2 = g_{ij} dx^i dx^j
+$$
+
+- $g_{ij}$ son las **componentes del tensor métrico**.
+- El espacio puede ser **plano o curvo** dependiendo de cómo se comporta $g_{ij}$.
+
+---
+
+## **Ejemplo: Plano Euclideano 2D**
+
+- En coordenadas cartesianas $(x, y)$:
+
+$$
+ds^2 = dx^2 + dy^2
+$$
+
+- En coordenadas polares $(r, \theta)$:
+
+$$
+ds^2 = dr^2 + r^2 d\theta^2
+$$
+
+- Aunque la forma cambia, el espacio sigue siendo plano!
+  - Es posible mostra que la curvatura es 0 en ambos casos.
+
+---
+
 ## **Geometría curva**
 
-![Experimento del ascensor](images/sphere_curvature.png)
+Consideremos ahora una esfera. Notar que hablamos de una *superficie*, i.e. un espacio 2D. Usamos coordenadas $(\theta, \phi)$:
 
----
+- $\theta$: ángulo polar (de $0$ a $\pi$)
+- $\phi$: ángulo azimutal (de $0$ a $2\pi$)
 
-## **Curvatura y Geodésicas**
+La métrica en la superficie de la esfera de radio $R$ es:
 
-- En Relatividad General, **la gravedad no es una fuerza**.
-- Los objetos siguen las trayectorias **más rectas posibles** en un espacio-tiempo curvo.
-   - Estas trayectorias se llaman **geodésicas**.
-
-**En el ejemplo anterior:**
-- En la Tierra, la ruta más corta entre dos puntos no es una línea recta en un mapa plano, sino un arco de un círculo máximo.
-<!-- - De manera similar, los objetos siguen geodésicas en el espacio-tiempo curvo. -->
-
----
-
-## **Curvatura y Geodésicas**
-- Formalmente, las **geodésicas** son trayectorias que extremizan la *acción* que describe una partícula en la RG.
-   - **Principio de Fermat**: La luz sigue el camino que minimiza el tiempo de viaje.
-   - **Extensión de Einstein**: Los cuerpos con masa siguen trayectorias que **maximizan el tiempo propio**.
-<!-- - Ejemplo: **Paradoja de los gemelos** → El gemelo viajero envejece menos. -->
-
+$$
+ds^2 = R^2 \left( d\theta^2 + \sin^2 \theta \, d\phi^2 \right)
+$$
 
 
 ---
 
-## **La Métrica del Espacio-Tiempo**
+## **Geometría curva**
 
-- Para medir curvatura, debemos definir **cómo medir distancias.**
-- El tensor métrico (*la métrica*) es una herramienta que traduce diferencias en coordenadas a distancias físicas.
-- El **elemento de línea** nos da una distancia infinitesimal:
+Un ejemplo de geometría curva es la superficie de una esfera:
 
-$$ ds^2 = g_{ab} dx^a dx^b $$
+![esfera](images/sphere_curvature.png)
 
-donde $g_{ab}$ es el **tensor métrico**, que define la geometría del espacio-tiempo. En RG, la métrica juega el mismo papel que el potencial gravitacional en la teoría de Newton.
+---
+
+## **Geometría curva**
+
+- Si recorremos imaginariamente la superficie, podemos darnos cuenta que el espacio es curvo:
+  - En el camino mostrado en la figura, podemos verificar que no se respeta la relación $C=2\pi S$.
+  - Alternativamente, podemos trazar una trayectoria "triangular", y verificar que la suma de los ángulos internos de dicho triángulo es mayor que $180°$.
+
+Notar que, *localmente*, la superficie de la esfera **parece plana** en vez de curva (como en el caso de la Tierra). 
+
+---
+
+## **La curvatura en la esfera**
+
+- Notemos que, según la dirección (ángulo) en que nos movamos sobre la esfera, la distancia recorrida es distinta:
+
+$$
+ds^2 = R^2 d\theta^2 + R^2 \sin^2 \theta d\phi^2
+$$
+
+- A lo largo de una línea de $\theta = \text{const}$:
+
+$$
+ds = R \sin \theta d\phi \quad \text{(círculo de latitud)}
+$$
+
+- A lo largo de una línea de $\phi = \text{const}$:
+
+$$
+ds = R d\theta \quad \text{(de polo a polo)}
+$$
+
+---
+
+## **La curvatura en la esfera**
+
+- Es posible mostrar que la **curvatura escalar** (curvatura Gaussiana) $K$ en la esfera es:
+
+$$
+K = \frac{1}{R^2}
+$$
+
+- Esta curvatura es **constante y positiva**. En general:
+- En espacios planos, $K = 0$.
+- En espacios hiperbólicos, $K < 0$.
+- En espacios parabólicos, $K > 0$.
+
+---
+
+## **Espacio vs espaciotiempo**
+
+- Hasta ahora, hemos descrito **espacios puramente espaciales**.
+- Para describir eventos en física, necesitamos agregar una **coordenada temporal** $t$.
+- Antes de esto, notemos que las métricas anteriores siempre fueron tales que las distancias medidas son **positivas** .
+
+Al agregar una coordenada temporal, esto último ya no será cierto.
+
+---
+
+## **Espacio vs espaciotiempo**
+- Por convención, $g_{00}$ será **negativa**.
+
+$$ ds^2 = g_{\mu\nu} dx^\mu dx^\nu $$
+
+- Entonces, $ds^2$ podrá ser positivo, negativo, o cero.
 
 ---
 
@@ -366,7 +180,7 @@ donde $g_{ab}$ es el **tensor métrico**, que define la geometría del espacio-t
 
 - Un caso particular es el espaciotiempo **plano**, que se asocia a la Relatividad Especial, y se denomina la **métrica de Minkowski**:
 
-$$ g_{ab} = \eta_{ab} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} $$
+$$ g_{\mu\nu} = \eta_{\mu\nu} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} $$
 
 - En coordenadas cartesianas $(t, x, y, z)$, tenemos:
 
@@ -414,47 +228,26 @@ Dependiendo del signo de $ds^2$, tenemos diferentes tipos de separación entre e
 **Ejemplo:**
 - Dos eventos separados por un intervalo **espacial** no pueden afectarse entre sí, ya que ningún objeto puede viajar más rápido que la luz.
 
+---
+
+## **Curvatura y Geodésicas**
+
+- En Relatividad General, **la gravedad no es una fuerza**.
+- Los objetos siguen las trayectorias **más rectas posibles** en un espacio-tiempo curvo.
+   - Estas trayectorias se llaman **geodésicas**.
+
+**En el ejemplo anterior:**
+- En la Tierra, la ruta más corta entre dos puntos no es una línea recta en un mapa plano, sino un arco de un círculo máximo.
+<!-- - De manera similar, los objetos siguen geodésicas en el espacio-tiempo curvo. -->
 
 ---
 
-## **Coordenadas Esféricas**
+## **Curvatura y Geodésicas**
+- Formalmente, las **geodésicas** son trayectorias que extremizan la *acción* que describe una partícula en la RG.
+   - **Principio de Fermat**: La luz sigue el camino que minimiza el tiempo de viaje.
+   - **Extensión de Einstein**: Los cuerpos con masa siguen trayectorias que **maximizan el tiempo propio**.
+<!-- - Ejemplo: **Paradoja de los gemelos** → El gemelo viajero envejece menos. -->
 
-Podemos transformar la métrica de Minkowski a coordenadas esféricas $(t, R, \theta, \phi)$, obteniendo:
-
-$$ g_{ab} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & R^2 & 0 \\ 0 & 0 & 0 & R^2 \sin^2\theta \end{bmatrix} $$
-
-El elemento de línea asociado es:
-
-$$ ds^2 = -dt^2 + dR^2 + R^2 d\theta^2 + R^2 \sin^2\theta d\phi^2 $$
-
-O usando el ángulo sólido $d\Omega^2$:
-
-$$ ds^2 = -dt^2 + dR^2 + R^2 d\Omega^2, $$
-
-con:
-
-$$ d\Omega^2 = d\theta^2 + \sin^2\theta d\phi^2. $$
-
----
-
-## **Coordenadas Esféricas**
-
-Podemos medir la distancia propia desde el origen hasta un punto con coordenada radial $R$:
-
-- Elegimos un camino a **tiempo constante** y sin cambios angulares ($dt = d\theta = d\phi = 0$).
-- A partir de la métrica:
-
-$$ dl = \sqrt{ds^2} = dR $$
-
----
-
-## **Coordenadas Esféricas**
-
-- Integrando:
-
-$$ l = \int_0^R dR' = R. $$
-
-Este resultado es consistente con nuestra intuición de la distancia en coordenadas esféricas.
 
 
 ---
