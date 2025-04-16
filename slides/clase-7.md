@@ -1,7 +1,7 @@
 ---
 marp: true
-math: katex
 paginate: true
+math: katex
 html: true
 style: |
   section {
@@ -9,167 +9,260 @@ style: |
     font-family: 'Arial', sans-serif;
     overflow: hidden;
   }
+  img {
+    display: block;
+    margin: auto;
+    width: 60%;
+    max-width: 100%;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: black;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 ---
 
-# **La solución de agujero negro**
-## Clase 7
-
----
-
-## **Objetivos de la Clase**
-- Derivar la solución exacta de Schwarzschild en RG.
-- Interpretación física del espaciotiempo de Schwarzschild.
-- Analizar propiedades geométricas como el radio areal y la curvatura.
-- Introducir los diagramas de embedding para visualizar la curvatura del espaciotiempo.
-- Estudiar el concepto de horizontes de agujeros negros y sus propiedades.
-
----
-
-## **La Solución de Schwarzschild**
-- Poco después de la publicación de la RG, **Karl Schwarzschild** encontró una solución exacta para un objeto **esféricamente simétrico** en el **vacío**.
-- La **métrica de Schwarzschild** se expresa como:
-
-  $$
-  ds^2 = - \left( 1 - \frac{2M}{R} \right) dt^2 + \left( 1 - \frac{2M}{R} \right)^{-1} dR^2 + R^2 d\Omega^2
-  $$
-
-  donde $M$ representa la **masa** del objeto y $d\Omega^2 = d\theta^2 + \sin^2\theta d\phi^2$.
-
-- Para $M = 0$, recuperamos la **métrica de Minkowski**.
-
----
-
-## **Propiedades de la Solución de Schwarzschild**
-- La coordenada **$R$** en la métrica tiene significado físico:  
-  - La **circunferencia** de un círculo de radio $R$ es **$C = 2\pi R$**.
-  - La **área** de una esfera de radio $R$ es **$A = 4\pi R^2$**.
-
-- Estas propiedades **son invariantes en cualquier sistema de coordenadas**.
-- Se denomina **radio areal** porque se relaciona directamente con medidas físicas.
+# **Espaciotiempo y geometría**
+## Clase 6
 
 ---
 
-## **Curvatura y Singularidad en Schwarzschild**
-- El tensor de Riemann $R^a{}_{bcd}$ para la métrica de Schwarzschild muestra que:
-  - Para **$R \to 0$**, la curvatura diverge: **singularidad espaciotemporal**.
-  - Para **$R \gg M$**, el espacio-tiempo se vuelve **asintóticamente plano**.
-
-- Schwarzschild describe una **solución de vacío**, lo que significa que no hay materia en el dominio de la solución, pero sí curvatura.
+## **Plan de la Clase**
+- El tensor métrico y el elemento de línea.
+- La curvatura del espacio(-tiempo).
+- Ejemplo: la métrica de Minkowski.
 
 ---
 
-## **Visualización de la Curvatura: Diagramas de Embebimiento**
-- Se puede visualizar la curvatura de una **sección espacial** ($t = \text{const}$) de Schwarzschild embebiéndola en un espacio tridimensional.
-- Se toma la sección ecuatorial ($\theta = \pi/2$) y se define una función de altura $z(R)$:
+## **Hacia la Relatividad General**
 
-  $$
-  (2)ds^2 = \left( 1 - \frac{2M}{R} \right)^{-1} dR^2 + R^2 d\phi^2
-  $$
-
-- Comparando con la métrica de un espacio tridimensional en coordenadas cilíndricas:
-
-  $$
-  (3)ds^2 = dR^2 + R^2 d\phi^2 + dz^2
-  $$
-
-  se obtiene la ecuación diferencial para $z(R)$:
-
-  $$
-  ( 1 - \frac{2M}{R} )^{-1} = 1 + \left( \frac{dz}{dR} \right)^2
-  $$
-
-- **(Placeholder para la figura del diagrama de embebimiento)**
+- En la gravedad Newtoniana, la equivalencia entre masa inercial y gravitacional es un **hecho experimental**, sin una justificación fundamental.
+- **Einstein** vio esto como un indicio de una estructura más profunda.
+- En lugar de depender de las propiedades individuales de los objetos, la gravedad debe ser una propiedad del **espacio-tiempo mismo**.
+   - En particular, en una manifestación de su **curvatura**.
 
 ---
 
-## **Solución para el Diagrama de Embebimiento**
-- Integrando la ecuación diferencial se obtiene:
+## **La métrica**
 
-  $$
-  z = \pm \sqrt{8M(R - 2M)}
-  $$
+- Una **métrica** es una herramienta para medir **distancias** en un espacio.
+- En coordenadas, se representa por el **elemento de línea**:
 
-- El resultado es un **diagrama de embebimiento en forma de garganta**, que representa cómo se curva la sección espacial en un espacio tridimensional.
+$$
+ds^2 = g_{ij} dx^i dx^j
+$$
 
-- La región $R < 2M$ **no tiene solución real**, lo que indica la presencia de un **horizonte** en $R = 2M$.
-
-- **(Placeholder para la figura del diagrama de embebimiento de Schwarzschild)**
-
----
-
-## **Horizontes de Agujeros Negros**
-- **Definición de horizonte:**  
-  - Es una superficie que separa las regiones desde las cuales **la luz aún puede escapar** de aquellas desde las cuales **no puede escapar**.
-
-- Para un **agujero negro de Schwarzschild**, el horizonte se encuentra en:
-
-  $$
-  R = 2M
-  $$
-
-- Se pueden definir dos tipos de horizontes:
-  1. **Horizonte de eventos**: Define el límite absoluto para la causalidad.
-  2. **Horizonte aparente**: Superficie donde la expansión de los rayos de luz es cero.
+- $g_{ij}$ son las **componentes del tensor métrico**.
+- El espacio puede ser **plano o curvo** dependiendo de cómo se comporta $g_{ij}$.
 
 ---
 
-## **Transformaciones de Coordenadas en Schwarzschild**
-- La métrica de Schwarzschild en su forma original presenta una **singularidad de coordenadas** en $R = 2M$.
-- Se pueden hacer transformaciones de coordenadas para **remover esta singularidad**.
-  
-**Ejemplo: Coordenadas Isotrópicas**
-- Se introduce una nueva coordenada radial $r$ definida por:
+## **Ejemplo: Plano Euclideano 2D**
 
-  $$
-  R = r \left( 1 + \frac{M}{2r} \right)^2
-  $$
+- En coordenadas cartesianas $(x, y)$:
 
-- Bajo esta transformación, la métrica toma la forma:
+$$
+ds^2 = dx^2 + dy^2
+$$
 
-  $$
-  ds^2 = - \left( \frac{1 - M/(2r)}{1 + M/(2r)} \right)^2 dt^2 + \psi^4 (dr^2 + r^2 d\Omega^2)
-  $$
+- En coordenadas polares $(r, \theta)$:
 
-  donde $\psi$ es un **factor conforme**.
+$$
+ds^2 = dr^2 + r^2 d\theta^2
+$$
+
+- Aunque la forma cambia, el espacio sigue siendo plano!
+  - Es posible mostra que la curvatura es 0 en ambos casos.
 
 ---
 
-## **Horizonte en Diferentes Coordenadas**
-- En coordenadas isotrópicas, el horizonte no aparece en $R = 2M$ sino en un valor diferente de $r$.
-- Esto muestra que **el horizonte es una propiedad geométrica del espacio-tiempo**, no de un sistema de coordenadas en particular.
+## **Geometría curva**
 
-- **(Placeholder para la figura del horizonte en diferentes coordenadas)**
+Consideremos ahora una esfera. Notar que hablamos de una *superficie*, i.e. un espacio 2D. Usamos coordenadas $(\theta, \phi)$:
+
+- $\theta$: ángulo polar (de $0$ a $\pi$)
+- $\phi$: ángulo azimutal (de $0$ a $2\pi$)
+
+La métrica en la superficie de la esfera de radio $R$ es:
+
+$$
+ds^2 = R^2 \left( d\theta^2 + \sin^2 \theta \, d\phi^2 \right)
+$$
+
 
 ---
 
-## **Ejercicios Propuestos**
-1. **Calcular la curvatura de Schwarzschild**:  
-   - Demostrar que el tensor de Riemann $R^a{}_{bcd}$ diverge en $R \to 0$.
-   - Mostrar que $R_{ab} = 0$ en toda la solución.
+## **Geometría curva**
 
-2. **Diagramas de Embebimiento**:  
-   - Resolver la ecuación diferencial de $z(R)$ para construir el diagrama de embebimiento.
-   - Interpretar la geometría del agujero negro.
+Un ejemplo de geometría curva es la superficie de una esfera:
 
-3. **Transformaciones de coordenadas**:  
-   - Aplicar la transformación $dt = dt - f(R)dR$ para eliminar la singularidad en $R = 2M$.
-   - Mostrar que la nueva métrica describe el mismo espacio-tiempo en coordenadas regulares.
+![esfera](images/sphere_curvature.png)
+
+---
+
+## **Geometría curva**
+
+- Si recorremos imaginariamente la superficie, podemos darnos cuenta que el espacio es curvo:
+  - En el camino mostrado en la figura, podemos verificar que no se respeta la relación $C=2\pi S$.
+  - Alternativamente, podemos trazar una trayectoria "triangular", y verificar que la suma de los ángulos internos de dicho triángulo es mayor que $180°$.
+
+Notar que, *localmente*, la superficie de la esfera **parece plana** en vez de curva (como en el caso de la Tierra). 
+
+---
+
+## **La curvatura en la esfera**
+
+- Notemos que, según la dirección (ángulo) en que nos movamos sobre la esfera, la distancia recorrida es distinta:
+
+$$
+ds^2 = R^2 d\theta^2 + R^2 \sin^2 \theta d\phi^2
+$$
+
+- A lo largo de una línea de $\theta = \text{const}$:
+
+$$
+ds = R \sin \theta d\phi \quad \text{(círculo de latitud)}
+$$
+
+- A lo largo de una línea de $\phi = \text{const}$:
+
+$$
+ds = R d\theta \quad \text{(de polo a polo)}
+$$
+
+---
+
+## **La curvatura en la esfera**
+
+- Es posible mostrar que la **curvatura escalar** (curvatura Gaussiana) $K$ en la esfera es:
+
+$$
+K = \frac{1}{R^2}
+$$
+
+- Esta curvatura es **constante y positiva**. En general:
+- En espacios planos, $K = 0$.
+- En espacios hiperbólicos, $K < 0$.
+- En espacios parabólicos, $K > 0$.
+
+---
+
+## **Espacio vs espaciotiempo**
+
+- Hasta ahora, hemos descrito **espacios puramente espaciales**.
+- Para describir eventos en física, necesitamos agregar una **coordenada temporal** $t$.
+- Antes de esto, notemos que las métricas anteriores siempre fueron tales que las distancias medidas son **positivas** .
+
+Al agregar una coordenada temporal, esto último ya no será cierto.
+
+---
+
+## **Espacio vs espaciotiempo**
+- Por convención, $g_{00}$ será **negativa**.
+
+$$ ds^2 = g_{\mu\nu} dx^\mu dx^\nu $$
+
+- Entonces, $ds^2$ podrá ser positivo, negativo, o cero.
+
+---
+
+## **El Espaciotiempo de Minkowski**
+
+- Un caso particular es el espaciotiempo **plano**, que se asocia a la Relatividad Especial, y se denomina la **métrica de Minkowski**:
+
+$$ g_{\mu\nu} = \eta_{\mu\nu} = \begin{bmatrix} -1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} $$
+
+- En coordenadas cartesianas $(t, x, y, z)$, tenemos:
+
+$$ ds^2 = -dt^2 + dx^2 + dy^2 + dz^2 $$
+
+<!-- - Es la versión relativista del **Teorema de Pitágoras**. -->
+
+---
+## **Cono de luz y causalidad**
+
+
+![diagrama](images/lightcone_diagram.png)
+
+---
+
+## **Tipos de Intervalos en Espaciotiempo**
+
+Dependiendo del signo de $ds^2$, tenemos diferentes tipos de separación entre eventos:
+
+1. **Intervalo Espacial ($ds^2 > 0$)**
+   - Predomina la separación en espacio.
+   - Puede medirse con **reglas**.
+
+---
+
+## **Tipos de Intervalos en Espaciotiempo**
+
+2. **Intervalo Temporal ($ds^2 < 0$)**
+   - Predomina la separación en tiempo.
+   - Puede medirse con **relojes.**
+   - Los objetos con masa solo pueden seguir trayectorias de este tipo.
+
+3. **Intervalo Nulo ($ds^2 = 0$)**
+   - Trayectoria seguida por la luz.
+   - Define los **conos de luz**, lo cuales definen la **causalidad** .
+
+---
+
+## **Cono de Luz y Causalidad**
+
+- En un diagrama espacio-tiempo, los eventos que pueden estar causalmente conectados deben estar dentro del **cono de luz**.
+- Los eventos **fuera del cono de luz** no pueden afectarse mutuamente.
+- Esto define la **causalidad en Relatividad Especial y General**.
+
+**Ejemplo:**
+- Dos eventos separados por un intervalo **espacial** no pueden afectarse entre sí, ya que ningún objeto puede viajar más rápido que la luz.
+
+---
+
+## **Curvatura y Geodésicas**
+
+- En Relatividad General, **la gravedad no es una fuerza**.
+- Los objetos siguen las trayectorias **más rectas posibles** en un espacio-tiempo curvo.
+   - Estas trayectorias se llaman **geodésicas**.
+
+**En el ejemplo anterior:**
+- En la Tierra, la ruta más corta entre dos puntos no es una línea recta en un mapa plano, sino un arco de un círculo máximo.
+<!-- - De manera similar, los objetos siguen geodésicas en el espacio-tiempo curvo. -->
+
+---
+
+## **Curvatura y Geodésicas**
+- Formalmente, las **geodésicas** son trayectorias que extremizan la *acción* que describe una partícula en la RG.
+   - **Principio de Fermat**: La luz sigue el camino que minimiza el tiempo de viaje.
+   - **Extensión de Einstein**: Los cuerpos con masa siguen trayectorias que **maximizan el tiempo propio**.
+<!-- - Ejemplo: **Paradoja de los gemelos** → El gemelo viajero envejece menos. -->
+
+
 
 ---
 
 ## **Resumen de la Clase**
-- La **solución de Schwarzschild** describe un agujero negro estático y esféricamente simétrico.
-- La **coordenada $R$** es el **radio areal**, con significado físico bien definido.
-- La curvatura **diverge en $R \to 0$**, indicando una **singularidad**.
-- **Diagramas de embebimiento** nos permiten visualizar la curvatura del espacio-tiempo.
-- El **horizonte en $R = 2M$** marca el límite de la región desde la cual la luz no puede escapar.
 
----
+- La equivalencia entre masas inercial y gravitacional llevó a Einstein a considerar que la gravedad es una propiedad del **espacio-tiempo**.
+- En lugar de fuerzas, los objetos se mueven en **geodésicas** dentro del espacio-tiempo curvo.
+- El **tensor métrico** define la geometría del espacio-tiempo y reemplaza al potencial gravitacional de Newton.
+- La métrica de Minkowski describe un espacio-tiempo plano y define intervalos espacio-temporales.
+- Los **conos de luz** delimitan la causalidad en Relatividad.
 
-## **Próxima Clase: Agujeros Negros Rotantes y el Espaciotiempo de Kerr**
-- Generalización de Schwarzschild para rotación.
-- Propiedades del horizonte y ergosfera.
-- Interpretación física y aplicaciones astrofísicas.
-
----
+<!-- --- -->
+<!---->
+<!-- ## **Ejercicios Propuestos** -->
+<!-- 1. Partiendo de la métrica de Minkowski, derivar la expresión del intervalo espaciotemporal en coordenadas esféricas. -->
+<!-- 2. Mostrar que el intervalo es **invariante bajo transformaciones de coordenadas**. -->
 
