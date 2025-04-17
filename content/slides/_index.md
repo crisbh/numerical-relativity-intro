@@ -11,7 +11,7 @@ description: "Clases del curso"
 - [Clase 4: El tensor de marea](clase-4.html)
 - [Clase 5: Notación tensorial](clase-5.html)
 - [Clase 6: La métrica y espacios curvos](clase-6.html)
-<!-- - [Clase 6: Espaciotiempo y geometría](clase-6.html) -->
+- [Clase 7: Espaciotiempo y las geodésicas](clase-7.html)
 <!-- - [Clase 6: Las ecuaciones de Einstein](clase-6.html) -->
 <!-- - [Clase 7: La solución de agujero negro](clase-7.html) -->
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
