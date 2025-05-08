@@ -32,39 +32,17 @@ style: |
   }
 ---
 
-# **Las Ecuaciones de Einstein**
-## Clase 8
+# **Taller: Agujeros negros y geodésicas**
+## Clase 9
 
 ---
 
 ## **Plan de la Clase**
 - Repaso última clase.
-- El tensor de Riemann.
-- Las Ecuaciones de Einstein.
-- La solución de Schwarzschild.
-
----
-
-## **Resumen de la última clase**
-
-- **Geodesicas**: Trajectorias de partículas "libres" en una espaciotiempo curvo.
-  - Son la generalización del concepto de **línea recta**, i.e. la distancia más corta entre dos puntos.
-- **Derivada covariante** $\nabla_\mu$: Generaliza el concepto de derivada parcial para tensores.
-  - Se reduce a la derivada parcial en el caso de escalares.
-
----
-
-## **La derivada covariante**
-
-  - En espacios curvos, la noción de derivada tradicional (parcial) se generaliza a la **derivada covariante**:
-
-$$
-\nabla_\mu v^\alpha = \partial_\mu v^\alpha + \Gamma^\alpha_{\mu\nu} v^\nu
-$$
-
-$$
-\nabla_\mu v_\alpha = \partial_\mu v_\alpha - \Gamma^\nu_{\mu\alpha} v_\nu
-$$
+- Propiedades de la solución de Schwarzschild.
+- Ejercicios prácticos:
+  - Cálculo de símbolos de Christoffel.
+  - Solución de la ecuación geodésica.
 
 ---
 
@@ -77,56 +55,16 @@ $$
 \left(\partial_\mu g_{\nu\beta} + \partial_\nu g_{\mu\beta} - \partial_\beta g_{\mu\nu}\right)
 $$
 
-- Es un objeto simétrico con dos índices, pero realmente **no es un tensor**.
+- Contiene primeras derivadas de la métrica.
+- Permite construir piezas fundamentales como la derivada covariante, o el
+Tensor de Riemann.
 
 ---
 
-## **La ecuación geodésica**
+## **El Tensor de Riemann**
 
-- En RG, la gravedad **ya no es una fuerza** , i.e. las partículas son "libres" (a menos que incluyamos una fuerza **real**).
-$$
-a^\mu=\frac{Dv^\mu}{D\tau}=u^\mu \nabla_\nu u^\nu = 0
-$$ 
+- El tensor de Riemann contiene información sobre la **curvatura** del espaciotiempo:
 
-- Explícitamente, la ecuación geodésica toma la forma:
-
-$$
-\boxed{
-\frac{d^2 x^\alpha}{d\tau^2} + \Gamma^\alpha_{\mu\nu} \frac{dx^\mu}{d\tau}\frac{dx^\nu}{d\tau} = 0
-}
-$$
-
----
-
-## **La ecuación de marea en RG**
-
-- La ecuación anterior es análoga a la **2da ley de Newton**.
-- Qué pasa si intentamos buscar el equivalente a la ecuación de marea de la gravedad Newtoniana?
-
-La idea es aplicar la ecuación geodésica a dos partículas cercanas, expandir en Taylor, y escribir una ecuación para el vector de separación entre ambas.
-
----
-
-## **La ecuación de marea en RG**
-
-- Al repetir el razonamiento que nos llevó a la ecuación de marea: 
-  - En vez de $F=-\nabla{\Phi}$, ahora aparece $\Gamma\sim\partial g_{\mu\nu}$.
-  - Luego, donde antes apareció $\Phi$ ahora aparece $g_{\mu\nu}$.
-  - Los términos $\sim\partial\partial\Phi$ ahora aparece $\sim\partial\partial g_{\mu\nu}$.
-
----
-
-## **La ecuación de marea en RG**
-
-- La versión de RG de la ecuación de marea es la **ecuación de desviación geodésica**:
-
-$$
-\boxed{
-\frac{d^2\Delta x^\alpha}{d\tau^2} = - R^\alpha_{\;\beta\gamma\delta}u^\beta u^\gamma \Delta x^\delta
-}
-$$
-
-donde el **tensor de Riemann** está dado por:
 $$
 R^\alpha_{\;\beta\gamma\delta} = 
 \partial_\gamma \Gamma^\alpha_{\;\delta\beta} - 
@@ -135,26 +73,7 @@ R^\alpha_{\;\beta\gamma\delta} =
 \Gamma^\alpha_{\;\delta\mu}\Gamma^\mu_{\;\gamma\beta}
 $$
 
----
-
-## **El Tensor de Riemann**
-
-- El tensor de Riemann contiene información sobre la **curvatura** del espaciotiempo.
-  - Un espaciotiempo es plano si y solo si el tensor de Riemann es cero en todas partes.
-
 - Este tensor nos permite identificar un espaciotiempo curvo **independientemente de que coordenadas utilizamos**.
-
-
----
-
-## **El Tensor de Riemann: ejemplo**
-
-- Imaginemos dos personas en la superficie de la Tierra caminando desde el ecuador hacia el norte: al inicio sus caminos son paralelos.
-- Sin embargo, al acercarse al polo norte, sus caminos convergen.
-  - Se juntan aunque no haya fuerzas actuando lateralmente!
-  - La superficie curva (una esfera) produce esta convergencia.
-
-La curvatura (tensor de Riemann) genera esta convergencia.
 
 ---
 
@@ -194,43 +113,18 @@ $$
 | Tensor de marea | $R_{ij}=\partial_i \partial_j \Phi$ | Riemann $R^\rho_{\sigma\mu\nu}$ |
 | Ecuación de campo | $\nabla^2 \Phi = 4\pi G \rho$ | $G_{\mu\nu} = 8\pi G T_{\mu\nu}$ |
 
+---
+
+## **La solución de Schwarzschild** 
+
+La métrica de Schwarzschild es una solución a las ecuaciones de Einstein para una partícula puntual.
+- Vacío (masa-energía solo en el origen)
+- Simetría esférica
+- Métrica estacionaria
 
 ---
 
-## **Las ecuaciones de campo de Einstein** 
-
-En palabras del físico John Archibald Wheeler:
-
-> **El espaciotiempo le dice a la materia como moverse; la materia le dice al espaciotiempo como curvarse.**  
-
-- La geometría rige el movimiento a través de las geodésicas.
-- La materia y energía infuencian la curvatura a través de las EdE.
-
----
-
-## **Las ecuaciones de campo de Einstein** 
-
-- Las EdE son **EDP no lineales**, donde buscamos como solución las componentes de $g_{\mu\nu}$.
-- Existen pocas soluciones analíticas, que típicamente requieren simplificaciones:
-  - Simetrías (e.g. simetría esférica)
-  - Vacío ($T_{\mu\nu}=0$)
-
-**La solución de Schwarzschild** es una de las soluciones principales, la cual se obtiene con la simplificaciones de: vacío, esférica, estacionaria.
-
----
-
-## **La solución de Schwarzschild (1916)** 
-
-**Karl Schwarzschild** encontró la primera solución exacta de la RG tras su publicación en 1915 por Einstein.
-
-- Simplificaciones:
-  - Simetría esférica
-  - Espaciotiempo estacionario ($\partial_t g_{\mu\nu}=0$)
-  - Espaciotiempo vacío fuera de masa puntual ($T_{\mu\nu}=0$)
-
----
-
-## **La solución de Schwarzschild (1916)** 
+## **La solución de Schwarzschild** 
 
 El elemento de línea (métrica) de Schwarzschild es:
 $$
@@ -239,70 +133,58 @@ $$
 
 donde:
 - $d\Omega^2=d\theta^2+\sin^2\theta\,d\phi^2$ (parte angular).
-- $M$: parámetro de masa (masa-energía).
+- $M$: parámetro de masa.
 
 ---
 
-## **La solución de Schwarzschild (1916)** 
+## **La solución de Schwarzschild** 
 
-- Notar que se recupera la métrica de Minkowski asintóticamente ($r\gg 2GM$):
+- Notar que se recupera la métrica de Minkowski al alejarse mucho de la partícula  ($r\gg 2GM$):
   $$
   ds^2 \approx -dt^2+dr^2+r^2 d\Omega^2
   $$
 
+- Por otra parte: qué pasará cuando la métrica se indetermina?
 
 ---
 
 ## **El horizonte de eventos** 
 
-- Se define **el radio de Schwarzschild**:
+- **Radio de Schwarzschild**:
 $$
 r_s = \frac{2GM}{c^2}
 $$
 - **Horizonte de eventos** en $r=r_s$: la luz no puede escapar.
 - La métrica diverge en $r=r_s$. Sin embargo, esta es una **singularidad de coordenadas**, i.e. desaparece si elegimos otro sistema de coordenadas conveniente.
-  - La divergencia en $r=0$ **sí es física**: la curvatura diverge (fuerza de marea infinita).
+  - La divergencia en $r=0$ **sí es física**: la curvatura diverge.
 
 ---
 
-## **Interpretación geométrica** 
+<!-- ## **El horizonte de eventos**  -->
+<!---->
+<!-- - El área de una esfera de radio $r=r_s$ es: -->
+<!-- $$ -->
+<!-- A=4\pi r_s^2=16\pi G^2M^2 -->
+<!-- $$ -->
+<!-- - Esto define el "tamaño" del agujero negro. -->
+<!--   - Es decir, la región de "no retorno". -->
+<!---->
+<!-- --- -->
 
-- El área de una esfera de radio $r=r_s$ es:
-$$
-A=4\pi r_s^2=16\pi G^2M^2
-$$
-- Esto define el "tamaño" del agujero negro.
-  - Es decir, la región de "no retorno".
+## **El horizonte de eventos** 
 
----
-
-## Schwarzschild Black Hole Structure (placeholder for diagram)
-
-- Outside horizon ($r>r_s$): observers can remain static.
-- On horizon ($r=r_s$): photon orbits unstable, escape impossible.
-- Inside horizon ($r<r_s$): all paths lead to singularity ($r=0$).
-
-*(Insert diagram showing Schwarzschild geometry here)*
+- Fuera del horizonte ($r>r_s$): los observadores pueden permanecer estáticos.
+- En el horizonte ($r=r_s$): las trayectorias de la luz no puede escapar.
+- Dentro del horizonte ($r<r_s$): cualquier trayectoria lleva a la singularidad ($r=0$).
 
 ---
 
-## Embedding Diagrams (placeholder)
+## **Taller** 
 
-- Visualizing curvature: embedding two-dimensional slices in flat 3D space.
-- For Schwarzschild metric at fixed time and equator $(\theta=\pi/2)$:
-$$
-ds^2=\left(1-\frac{2GM}{r}\right)^{-1}dr^2+r^2d\phi^2
-$$
-*(Insert embedding diagram here)*
+Para el taller utilizaremos la métrica de Schwarzschild. En particular, nos interesará
 
----
+1. Calcular los símbolos de Christoffel.
+2. Resolver la ecuación geodésica.
+3. Visualizar los resultados.
 
-## Schwarzschild Solution and Birkhoff’s Theorem
-
-**Birkhoff's theorem** states:
-
-> "Any spherically symmetric solution of Einstein's vacuum equations must be static and asymptotically Schwarzschild."
-
-- Important consequence:
-  - Outside any spherical object (star, black hole), spacetime is Schwarzschild.
 
