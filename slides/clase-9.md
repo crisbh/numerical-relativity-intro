@@ -32,17 +32,18 @@ style: |
   }
 ---
 
-# **Taller: Agujeros negros y geodésicas**
+# **Ec. de Einstein y agujeros negros**
 ## Clase 9
 
 ---
 
 ## **Plan de la Clase**
-- Repaso última clase.
+- Repaso última clase (antes del paro).
 - Propiedades de la solución de Schwarzschild.
 - Ejercicios prácticos:
-  - Cálculo de símbolos de Christoffel.
-  - Solución de la ecuación geodésica.
+  - Cálculo de los símbolos de Christoffel.
+  - Ecuación geodésica.
+  - Tutoriales de `Einsteinpy`.
 
 ---
 
@@ -56,8 +57,7 @@ $$
 $$
 
 - Contiene primeras derivadas de la métrica.
-- Permite construir piezas fundamentales como la derivada covariante, o el
-Tensor de Riemann.
+- Permite construir piezas fundamentales como la derivada covariante, o el Tensor de Riemann.
 
 ---
 
@@ -179,12 +179,11 @@ $$
 
 ---
 
-## **Taller** 
+## **Taller (próxima clase)** 
 
 Para el taller utilizaremos la métrica de Schwarzschild. En particular, nos interesará
 
 1. Calcular los símbolos de Christoffel.
 2. Resolver la ecuación geodésica.
-3. Visualizar los resultados.
-
+3. Explorar la librería `EinsteinPy`
 
