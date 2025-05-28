@@ -13,8 +13,8 @@ description: "Clases del curso"
 - [Clase 6: La métrica y espacios curvos](clase-6.html)
 - [Clase 7: Espaciotiempo y las geodésicas](clase-7.html)
 - [Clase 8: Las ecuaciones de Einstein](clase-8.html)
-- [Clase 9: Taller -  Visualizacion de la solución de agujero negro](clase-9.html)
-    - [Jupyter Notebook (Google Collab)](clase-9.html)
+- [Clase 9: Repaso y la solución de agujero negro](clase-9.html)
+    <!-- - [Jupyter Notebook (Google Collab)](clase-9.html) -->
 <!-- - [Clase 7: La solución de agujero negro](clase-7.html) -->
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
 <!-- - [Clase 9: Ondas gravitacionales](clase-9.html) -->
