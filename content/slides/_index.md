@@ -14,8 +14,7 @@ description: "Clases del curso"
 - [Clase 7: Espaciotiempo y las geodésicas](clase-7.html)
 - [Clase 8: Las ecuaciones de Einstein](clase-8.html)
 - [Clase 9: Repaso y la solución de agujero negro](clase-9.html)
-    <!-- - [Jupyter Notebook (Google Collab)](clase-9.html) -->
-<!-- - [Clase 7: La solución de agujero negro](clase-7.html) -->
+- [Clase 10: Taller 1 - Calculos simbólicos y la solución de Schwarzschild (ver Classroom)](./)
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
 <!-- - [Clase 9: Ondas gravitacionales](clase-9.html) -->
 <!-- - [Clase 10: Taller: simulacion de ondas gravitacionales](clase-10.html) -->
