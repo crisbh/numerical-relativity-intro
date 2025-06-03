@@ -15,8 +15,8 @@ description: "Clases del curso"
 - [Clase 8: Las ecuaciones de Einstein](clase-8.html)
 - [Clase 9: Repaso y la solución de agujero negro](clase-9.html)
 - [Clase 10: Taller 1 - Calculos simbólicos y la solución de Schwarzschild (ver Classroom)](./)
+- [Clase 11: Ondas gravitacionales](clase-11.html)
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
-<!-- - [Clase 9: Ondas gravitacionales](clase-9.html) -->
 <!-- - [Clase 10: Taller: simulacion de ondas gravitacionales](clase-10.html) -->
 <!-- - [Clase 11: Ejercicios y Tarea](clase-11.html) -->
 <!-- - [Clase 12: Foliación del espaciotiempo y formalismo 3+1](clase-12.html) -->
