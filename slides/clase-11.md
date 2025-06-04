@@ -73,7 +73,7 @@ Luego:
 - Formalmente, el parámetro $\lambda$ es 'pequeño' en magnitud, i.e., debemos respetar la condición
 
 $$
-\vert \lambda \vert \ll 1\,.
+\vert \lambda \vert < 1\,.
 $$
 
 - Esto permite que la expansión perturbativa $F(x)= \sum_{i} \lambda^i f_i$ no diverja a medida que agregamos más y más términos.
@@ -163,11 +163,12 @@ Su efecto sobre un anillo de partículas de prueba será:
 - Las ondas gravitacionales pueden interpretarse como una componente del campo gravitacional que **se propaga**.
 - Notar que las obtuvimos mediante Teoría de Perturbaciones.
   - Su magnitud es extremadamente pequeña, incluso si se originaron debido a una gran densidad de materia/energía, e.g. un agujero negro no estático.
+  - Debemos mirar regiones suficientemente lejanas donde el espaciotiempo sea muy cercano a Minkowski (este fue el 'background' o fondo que utilizamos para las perturbaciones).
 
 ---
 
 ## **Fórmula del Cuadrupolo**
-- En concreto, las ondas gravitacionales se origina de cambios en el **momento cuadrupolar** de un sistema (el cual las 'emite').
+- En concreto, las ondas gravitacionales **se originan o emiten** por el cambio en el **momento cuadrupolar** de un sistema.
 - Para un sistema que evoluciona lentamente (respecto a la velocidad de la luz), la solución puede escribirse como:
 
   $$
@@ -239,16 +240,17 @@ donde $n^i = x^i/d$ es el vector de distancia 'normalizado'.
 
 ## **Conclusiones**
 
-- Al resolver las EdE en el regimen perturbativo (con un fondo de Minkowski), se obtiene una ecuación de onda, lo cual predice la existencia de ondas gravitacionales.
+- Al resolver las EdE en el regimen perturbativo (con un 'background' o fondo de Minkowski), se obtiene una ecuación de onda, lo cual predice la existencia de ondas gravitacionales.
 - Al contrario que Schwarzschild, estas ondas son **soluciones dinámicas**.
 - Se originan/emiten cuando el **momento cuadrupolar** de un sistema cambia en el tiempo.
-- Es posible obtener información sobre la fuente que las emite a través de ellas.
----
+- Es posible obtener información sobre la fuente que las emite a través de ellas, e.g. su masa (veremos más sobre esto la próxima clase).
 
-## **Próxima clase**
+<!-- --- -->
 
-- Análisis de la órbita del sistema binario.
-- Propiedades de las ondas gravitacionales emitidas.
-- Discusión de los resultados de LIGO-VIRGO.
-- Conexión con Relatividad Numérica.
-
+<!-- ## **Próxima clase** -->
+<!---->
+<!-- - Análisis de la órbita del sistema binario. -->
+<!-- - Propiedades de las ondas gravitacionales emitidas. -->
+<!-- - Discusión de los resultados de LIGO-VIRGO. -->
+<!-- - Conexión con Relatividad Numérica. -->
+<!---->
