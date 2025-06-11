@@ -16,11 +16,12 @@ description: "Clases del curso"
 - [Clase 9: Repaso y la solución de agujero negro](clase-9.html)
 - [Clase 10: Taller 1 - Calculos simbólicos y la solución de Schwarzschild (ver Classroom)](./)
 - [Clase 11: Ondas gravitacionales - parte 1](clase-11.html)
-<!-- - [Clase 12: Ondas gravitacionales - parte 2](clase-12.html) -->
+- [Clase 12: Clase de repaso y profundización](./)
+- [Clase 13: Ondas gravitacionales - parte 2](clase-13.html)
+<!-- - [Clase 13: Foliación del espaciotiempo y formalismo 3+1](clase-13.html) -->
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
 <!-- - [Clase 10: Taller: simulacion de ondas gravitacionales](clase-10.html) -->
 <!-- - [Clase 11: Ejercicios y Tarea](clase-11.html) -->
-<!-- - [Clase 12: Foliación del espaciotiempo y formalismo 3+1](clase-12.html) -->
 <!-- - [Clase 13: Construcción de datos iniciales](clase-13.html) -->
 <!-- - [Clase 14: Métodos numéricos y el Problema de Valor de Frontera](clase-14.html) -->
 <!-- - [Clase 15: Taller: Solución numérica de los constraints para condiciones iniciales](clase-15.html) -->
