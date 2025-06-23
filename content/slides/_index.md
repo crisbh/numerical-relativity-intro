@@ -20,7 +20,8 @@ description: "Clases del curso"
 - [Clase 13: Ondas gravitacionales - parte 2](clase-13.html)
 - [Clase 14: Taller 2 - Tutorial de NRPy+ - parte 1](https://nrpyplus.net/)
 - [Clase 15: Taller 2 - Tutorial de NRPy+ - parte 2](https://nrpyplus.net/)
-<!-- - [Clase 13: Foliación del espaciotiempo y formalismo 3+1](clase-13.html) -->
+<!-- - [Clase 16: Foliación del espaciotiempo y formalismo 3+1](clase-16.html) -->
+<!-- - [Clase 16: Foliación del espaciotiempo y formalismo 3+1](clase-16.html) -->
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
 <!-- - [Clase 10: Taller: simulacion de ondas gravitacionales](clase-10.html) -->
 <!-- - [Clase 11: Ejercicios y Tarea](clase-11.html) -->
