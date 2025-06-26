@@ -21,11 +21,11 @@ description: "Clases del curso"
 - [Clase 14: Taller 2 - Tutorial de NRPy+ - parte 1](https://nrpyplus.net/)
 - [Clase 15: Taller 2 - Tutorial de NRPy+ - parte 2](https://nrpyplus.net/)
 - [Clase 16: Foliación del espaciotiempo y el formalismo 3+1](clase-16.html)
+- [Clase 17: Construcción de datos (condiciones) iniciales](clase-17.html)
 <!-- - [Clase 16: Foliación del espaciotiempo y formalismo 3+1](clase-16.html) -->
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
 <!-- - [Clase 10: Taller: simulacion de ondas gravitacionales](clase-10.html) -->
 <!-- - [Clase 11: Ejercicios y Tarea](clase-11.html) -->
-<!-- - [Clase 13: Construcción de datos iniciales](clase-13.html) -->
 <!-- - [Clase 14: Métodos numéricos y el Problema de Valor de Frontera](clase-14.html) -->
 <!-- - [Clase 15: Taller: Solución numérica de los constraints para condiciones iniciales](clase-15.html) -->
 <!-- - [Clase 16: Ecuaciones de Evolución y el método de líneas](clase-16.html) -->
