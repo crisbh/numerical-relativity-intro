@@ -1,2 +1,4 @@
 # Hugo build output
 public/
+
+*.html

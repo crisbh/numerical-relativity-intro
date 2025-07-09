@@ -29,3 +29,8 @@ enableEmoji = true
     url = "/slides/"
     weight = 5
 
+[[menu.after]]
+    name = "📖 Tareas"
+    url = "/homeworks/"
+    weight = 6
+
