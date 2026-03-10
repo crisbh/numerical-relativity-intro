@@ -23,6 +23,8 @@ description: "Clases del curso"
 - [Clase 16: Foliación del espaciotiempo y el formalismo 3+1](clase-16.html)
 - [Clase 17: Construcción de datos (condiciones) iniciales](clase-17.html)
 - [Clase 18: Presentaciones de avance del proyecto final](./)
+- [Clase CEFITEV](clase-escuela-cefitev.html)
+- [Bienvenida CEFITEV](welcome-escuela-cefitev.html)
 
 <!-- Some of these were discarded or merged with other contents: -->
 <!-- - [Clase 8: Taller: Visualizacion de la solución de agujero negro ](clase-8.html) -->
